@@ -8,6 +8,23 @@ import Methodology from '@/components/Methodology';
 import Navbar from '@/components/Navbar';
 import ServiceModules from '@/components/ServiceModules';
 import WhySapphire from '@/components/WhySapphire';
+import type { Metadata } from 'next';
+import { defaultDescription, siteName, siteUrl } from '@/lib/seo';
+
+export const metadata: Metadata = {
+  title: 'School Consulting & Advisory for Growth',
+  description: defaultDescription,
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: siteName,
+    description: defaultDescription,
+    url: siteUrl,
+    type: 'website',
+    siteName,
+  },
+};
 
 export default function HomePage() {
   return (
@@ -31,4 +48,3 @@ export default function HomePage() {
     </div>
   );
 }
-

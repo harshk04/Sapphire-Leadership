@@ -6,9 +6,12 @@ import Navbar from '@/components/Navbar';
 import { Globe2, Lightbulb, ShieldCheck, Sparkles, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About Us | Sapphire Leadership & Advisory',
+  title: 'About Sapphire Leadership & Advisory',
   description:
-    'Learn about Sapphire Leadership & Advisory, our values, advisory team, and global footprint.',
+    'Learn about Sapphire Leadership & Advisory, our values, advisory team, and global footprint in school consulting and leadership advisory.',
+  alternates: {
+    canonical: '/aboutus',
+  },
 };
 
 const values = [

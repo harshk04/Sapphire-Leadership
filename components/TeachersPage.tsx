@@ -15,9 +15,12 @@ import {
 } from 'lucide-react';
 
 export const teachersPageMetadata: Metadata = {
-  title: 'For Teachers | Sapphire Leadership & Advisory',
+  title: 'For Teachers: Professional Development & Leadership',
   description:
     'Teacher training, leadership pathways, wellbeing programs, and academic coaching for high-performing schools.',
+  alternates: {
+    canonical: '/teacherspage',
+  },
 };
 
 const programs = [

@@ -16,6 +16,14 @@ const faqs = [
     q: 'Can you help with existing school turnarounds?',
     a: 'Absolutely. We conduct deep-dive audits of current operations and academic performance to implement strategic pivot plans for underperforming institutions.',
   },
+  {
+    q: 'Do you support schools beyond the launch phase?',
+    a: 'Yes. We provide ongoing advisory for enrollment strategy, leadership alignment, and operational improvements after opening day.',
+  },
+  {
+    q: 'Can you work with schools pursuing international curricula?',
+    a: 'We can. Our advisory covers CBSE, ICSE, and IB-aligned planning, including academic structure, staffing, and readiness support.',
+  },
 ];
 
 export default function FAQ() {
@@ -25,7 +33,7 @@ export default function FAQ() {
   return (
     <div>
       <h2 className="[font-family:var(--font-hanken)] text-[26px] font-semibold tracking-[-0.02em] text-primary md:text-[30px]">
-        Common Inquiries
+        Frequently Asked Questions
       </h2>
 
       <div className="mt-7 space-y-4">
@@ -42,12 +50,12 @@ export default function FAQ() {
             >
               <button
                 type="button"
-                className="flex w-full items-center justify-between gap-6 text-left text-[13px] font-semibold text-primary"
+                className="flex w-full cursor-pointer items-center justify-between gap-6 rounded-md text-left text-[13px] font-semibold text-primary"
                 aria-expanded={isOpen}
                 aria-controls={contentId}
                 onClick={() => setOpenIndex((v) => (v === idx ? null : idx))}
               >
-                <span>{item.q}</span>
+                <span className="flex-1 py-1">{item.q}</span>
                 <ChevronDown
                   className={[
                     'h-5 w-5 shrink-0 text-ink-muted transition-transform',
@@ -75,4 +83,3 @@ export default function FAQ() {
     </div>
   );
 }
-

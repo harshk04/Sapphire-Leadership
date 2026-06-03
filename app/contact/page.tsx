@@ -15,8 +15,12 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Sapphire Leadership & Advisory',
-  description: 'Reach Sapphire Leadership & Advisory across our global offices.',
+  title: 'Contact School Consulting Advisors',
+  description:
+    'Contact Sapphire Leadership & Advisory to discuss school setup, governance, growth, leadership planning, and strategic advisory services.',
+  alternates: {
+    canonical: '/contact',
+  },
 };
 
 const offices = [

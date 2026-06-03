@@ -76,9 +76,9 @@ export default function ConsultationForm() {
 
   return (
     <div id="consultation" className="glass rounded-lg p-7 md:p-10">
-      <h3 className="[font-family:var(--font-hanken)] text-lg font-semibold text-primary">
+      <h2 className="[font-family:var(--font-hanken)] text-2xl font-semibold tracking-[-0.02em] text-primary">
         Book a Consultation
-      </h3>
+      </h2>
       <p className="mt-2 text-[13px] text-ink-muted">
         Discuss your school project with our lead advisors.
       </p>
@@ -92,7 +92,7 @@ export default function ConsultationForm() {
           </div>
           <button
             type="button"
-            className="mt-4 rounded-full border border-surface-variant bg-white px-4 py-2 text-[12px] font-semibold text-primary"
+            className="mt-4 rounded-lg border border-surface-variant bg-white px-4 py-2 text-[12px] font-semibold text-primary"
             onClick={() => {
               setSubmitted(false);
               setValues({
@@ -148,7 +148,7 @@ export default function ConsultationForm() {
           <div className="space-y-2">
             <Label>Service Interest</Label>
             <select
-              className="w-full rounded-full border border-surface-variant bg-white/60 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-primary/20"
+              className="w-full rounded-lg border border-surface-variant bg-white/60 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-primary/20"
               value={values.serviceInterest}
               onChange={(e) => set('serviceInterest', e.target.value)}
               onBlur={() => markTouched('serviceInterest')}
@@ -168,7 +168,7 @@ export default function ConsultationForm() {
           <div className="space-y-2">
             <Label>Message</Label>
             <textarea
-              className="min-h-[110px] w-full resize-none rounded-xl border border-surface-variant bg-white/60 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-primary/20"
+              className="min-h-[110px] w-full resize-none rounded-lg border border-surface-variant bg-white/60 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-primary/20"
               placeholder="Briefly describe your vision..."
               value={values.message}
               onChange={(e) => set('message', e.target.value)}
@@ -182,7 +182,7 @@ export default function ConsultationForm() {
 
           <button
             type="submit"
-            className="w-full rounded-full bg-primary py-3.5 text-[13px] font-semibold text-white shadow-soft hover:shadow-lift"
+            className="w-full rounded-lg bg-primary py-3.5 text-[13px] font-semibold text-white shadow-soft hover:shadow-lift"
           >
             Submit Inquiry
           </button>
@@ -225,7 +225,7 @@ function Field({
     <div className="space-y-2">
       <Label>{label}</Label>
       <input
-        className="w-full rounded-full border border-surface-variant bg-white/60 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-primary/20"
+        className="w-full rounded-lg border border-surface-variant bg-white/60 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-primary/20"
         placeholder={placeholder}
         value={value}
         onChange={(e) => onChange(e.target.value)}
@@ -237,4 +237,3 @@ function Field({
     </div>
   );
 }
-

@@ -56,9 +56,9 @@ export default function Methodology() {
             whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.5, delay: idx * 0.05 }}
-            className="relative border-t border-white/20 pt-7"
+            className="relative border-t border-white/20 pt-9"
           >
-            <div className="absolute -top-4 left-0 text-6xl font-extrabold text-white/10">
+            <div className="absolute -top-5 left-2 z-10 text-6xl font-extrabold text-white/10">
               {s.number}
             </div>
             <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-gold">
@@ -73,4 +73,3 @@ export default function Methodology() {
     </SectionShell>
   );
 }
-

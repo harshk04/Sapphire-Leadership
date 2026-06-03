@@ -1,6 +1,5 @@
 'use client';
 
-import { cn } from '@/lib/cn';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useMemo, useState } from 'react';
@@ -47,12 +46,20 @@ export default function CaseStudies() {
   const active = useMemo(() => studies[index]!, [index]);
 
   useEffect(() => {
+    const intervalId = window.setInterval(() => {
+      setIndex((i) => (i + 1) % studies.length);
+    }, 5000);
+
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowLeft') setIndex((i) => (i - 1 + studies.length) % studies.length);
       if (e.key === 'ArrowRight') setIndex((i) => (i + 1) % studies.length);
     };
+
     window.addEventListener('keydown', onKeyDown);
-    return () => window.removeEventListener('keydown', onKeyDown);
+    return () => {
+      window.clearInterval(intervalId);
+      window.removeEventListener('keydown', onKeyDown);
+    };
   }, []);
 
   return (
@@ -167,4 +174,3 @@ export default function CaseStudies() {
     </SectionShell>
   );
 }
-

@@ -115,7 +115,7 @@ export default function Hero() {
             I&apos;m a Teacher
           </a>
           <a
-            href="/consultation"
+            href="/schools"
             className="inline-flex min-w-[210px] items-center justify-center rounded-full border border-white/18 bg-white/18 px-8 py-4 text-[15px] font-semibold text-white backdrop-blur-md transition-colors duration-200 hover:bg-white/24"
           >
             I&apos;m a School

@@ -1,12 +1,41 @@
 import Image from 'next/image';
-import { Facebook, Linkedin, Twitter } from 'lucide-react';
 import Link from 'next/link';
+
+const siteSections = [
+  {
+    title: 'Explore',
+    links: [
+      { label: 'Home', href: '/' },
+      { label: 'About Us', href: '/aboutus' },
+      { label: 'Contact', href: '/contact' },
+      { label: 'Book Consultation', href: '/consultation' },
+    ],
+  },
+  {
+    title: 'Solutions',
+    links: [
+      { label: 'For Schools', href: '/schools' },
+      { label: 'For Teachers', href: '/teacherspage' },
+      { label: 'For Students', href: '/studentpage' },
+      { label: 'Resources', href: '/resourcespage' },
+    ],
+  },
+  {
+    title: 'Resource Hub',
+    links: [
+      { label: 'Insights', href: '/resourcespage' },
+      { label: 'Teacher Pathways', href: '/teacherspage' },
+      { label: 'Student Programs', href: '/studentpage' },
+      { label: 'School Advisory', href: '/schools' },
+    ],
+  },
+];
 
 export default function Footer() {
   return (
     <footer className="border-t border-surface-variant bg-white">
-      <div className="mx-auto grid max-w-container gap-10 px-5 py-12 md:grid-cols-4 md:px-10">
-        <div className="md:col-span-1">
+      <div className="mx-auto grid max-w-container gap-10 px-5 py-12 md:px-10 lg:grid-cols-12">
+        <div className="lg:col-span-3">
           <Link href="/" className="inline-flex" aria-label="Sapphire Leadership & Advisory">
             <span className="block md:hidden">
               <Image
@@ -33,23 +62,11 @@ export default function Footer() {
           </p>
         </div>
 
-        <FooterCol
-          title="Solutions"
-          links={[
-            { label: 'Consultancy', href: '/consultation' },
-            { label: 'Teacher Training', href: '/teacherspage' },
-            { label: 'Student Success', href: '/studentpage' },
-          ]}
-        />
-        <FooterCol
-          title="Company"
-          links={[
-            { label: 'About', href: '/aboutus' },
-            { label: 'Insights', href: '/resourcespage' },
-            { label: 'Contact', href: '/contact' },
-          ]}
-        />
-        <FooterCol title="Legal" links={['Privacy Policy', 'Terms of Service']} />
+        <div className="grid gap-10 sm:grid-cols-2 lg:col-span-9 lg:grid-cols-3">
+          {siteSections.map((section) => (
+            <FooterCol key={section.title} title={section.title} links={section.links} />
+          ))}
+        </div>
       </div>
 
       <div className="border-t border-surface-variant">
@@ -58,32 +75,20 @@ export default function Footer() {
             © {new Date().getFullYear()} Sapphire Leadership &amp; Advisory. All
             rights reserved.
           </div>
-          <div className="flex items-center gap-4 text-ink-muted">
-            <a
-              href="#"
-              aria-label="Twitter"
-              className="hover:text-primary"
-            >
-              <Twitter className="h-4 w-4" />
-            </a>
-            <a
-              href="#"
-              aria-label="LinkedIn"
-              className="hover:text-primary"
-            >
-              <Linkedin className="h-4 w-4" />
-            </a>
-            <a
-              href="#"
-              aria-label="Facebook"
-              className="hover:text-primary"
-            >
-              <Facebook className="h-4 w-4" />
-            </a>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[12px] text-ink-muted md:justify-end">
+            <Link href="/privacy-policy" className="hover:text-primary">
+              Privacy Policy
+            </Link>
+            <Link href="/terms-of-service" className="hover:text-primary">
+              Terms of Service
+            </Link>
+            <Link href="/cookie-policy" className="hover:text-primary">
+              Cookie Policy
+            </Link>
           </div>
         </div>
       </div>
-    </footer>
+  </footer>
   );
 }
 
@@ -102,21 +107,12 @@ function FooterCol({
       <ul className="space-y-2">
         {links.map((l) => (
           <li key={typeof l === 'string' ? l : l.label}>
-            {typeof l === 'string' ? (
-              <a
-                href="#"
-                className="inline-block text-[13px] text-ink-muted transition-transform hover:translate-x-0.5 hover:text-primary"
-              >
-                {l}
-              </a>
-            ) : (
-              <Link
-                href={l.href}
-                className="inline-block text-[13px] text-ink-muted transition-transform hover:translate-x-0.5 hover:text-primary"
-              >
-                {l.label}
-              </Link>
-            )}
+            <Link
+              href={typeof l === 'string' ? '/' : l.href}
+              className="inline-block text-[13px] text-ink-muted transition-transform hover:translate-x-0.5 hover:text-primary"
+            >
+              {typeof l === 'string' ? l : l.label}
+            </Link>
           </li>
         ))}
       </ul>

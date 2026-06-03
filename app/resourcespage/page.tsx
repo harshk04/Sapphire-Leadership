@@ -5,8 +5,12 @@ import Navbar from '@/components/Navbar';
 import { ArrowRight, Download, FileText, Sparkles } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Resources | Sapphire Leadership & Advisory',
-  description: 'Insights, whitepapers, and strategic resources from Sapphire.',
+  title: 'Resources, Whitepapers & Insights',
+  description:
+    'Explore insights, whitepapers, and strategic resources for schools, leaders, and families from Sapphire Leadership & Advisory.',
+  alternates: {
+    canonical: '/resourcespage',
+  },
 };
 
 const articles = [

@@ -11,14 +11,28 @@ const modules = [
     description:
       "Detailed market research, competitive analysis, and financial forecasting to define the project's viability and unique value proposition.",
     image: '/images/service-left.png',
-    reverse: false,
+    accent: 'Planning',
   },
   {
     title: 'Phase II: Academic Framework & Affiliation',
     description:
       'Developing the core curriculum, teacher training programs, and managing the entire board affiliation process (CBSE/ICSE/IB).',
     image: '/images/service-right.png',
-    reverse: true,
+    accent: 'Academics',
+  },
+  {
+    title: 'Phase III: Campus & Operations Design',
+    description:
+      'Shaping facilities, workflows, and operational systems that support safety, scalability, and a premium school experience.',
+    image: '/images/service-modules.png',
+    accent: 'Infrastructure',
+  },
+  {
+    title: 'Phase IV: Launch & Growth Strategy',
+    description:
+      'Building enrollment momentum through brand positioning, admissions planning, and a structured post-launch growth roadmap.',
+    image: '/images/architecture-photo.png',
+    accent: 'Growth',
   },
 ];
 
@@ -31,7 +45,7 @@ export default function ServiceModules() {
         Service Modules
       </h2>
 
-      <div className="mt-10 space-y-8">
+      <div className="mt-10 grid gap-6 md:grid-cols-2">
         {modules.map((m, idx) => (
           <motion.div
             key={m.title}
@@ -39,22 +53,23 @@ export default function ServiceModules() {
             whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.55, delay: idx * 0.05 }}
-            className={[
-              'group flex flex-col items-stretch gap-6 md:gap-8',
-              m.reverse ? 'md:flex-row-reverse' : 'md:flex-row',
-            ].join(' ')}
+            className="group overflow-hidden rounded-lg border border-surface-variant/40 bg-white/70 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-soft"
           >
-            <div className="h-56 w-full overflow-hidden rounded-lg md:h-64 md:w-1/3">
+            <div className="relative h-52 overflow-hidden md:h-56">
               <Image
                 src={m.image}
-                alt=""
+                alt={m.title}
                 width={800}
                 height={600}
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-navy/10 to-transparent" />
+              <div className="absolute bottom-4 left-4 rounded-full bg-white/90 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-primary">
+                {m.accent}
+              </div>
             </div>
 
-            <div className="glass flex flex-1 flex-col justify-center rounded-lg p-7 md:p-10">
+            <div className="flex flex-1 flex-col p-7 md:p-8">
               <h3 className="[font-family:var(--font-hanken)] text-lg font-semibold text-primary md:text-xl">
                 {m.title}
               </h3>
@@ -74,4 +89,3 @@ export default function ServiceModules() {
     </SectionShell>
   );
 }
-

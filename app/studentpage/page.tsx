@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import AnimatedMetric from '@/components/AnimatedMetric';
 import {
   BookOpen,
   GraduationCap,
@@ -14,9 +15,12 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'For Students | Sapphire Leadership & Advisory',
+  title: 'For Students: Mentorship, Admissions & Career Advisory',
   description:
-    'Student success programs, academic guidance, admissions support, and career advisory.',
+    'Student success programs, academic guidance, university admissions support, and career advisory from Sapphire Leadership & Advisory.',
+  alternates: {
+    canonical: '/studentpage',
+  },
 };
 
 const metrics = [
@@ -118,14 +122,7 @@ export default function StudentPage() {
         <section className="bg-navy py-16 text-white md:py-24">
           <div className="mx-auto grid max-w-container grid-cols-2 gap-8 px-5 md:grid-cols-4 md:px-10">
             {metrics.map((metric) => (
-              <div key={metric.label} className="text-center">
-                <div className="font-display text-4xl font-semibold text-gold">
-                  {metric.value}
-                </div>
-                <div className="mt-2 text-[12px] uppercase tracking-[0.18em] text-white/60">
-                  {metric.label}
-                </div>
-              </div>
+              <AnimatedMetric key={metric.label} value={metric.value} label={metric.label} />
             ))}
           </div>
         </section>

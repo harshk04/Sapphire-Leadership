@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Hanken_Grotesk, Inter } from 'next/font/google';
 import './globals.css';
+import { defaultDescription, getSiteUrl, siteName, siteUrl } from '@/lib/seo';
 
 const hanken = Hanken_Grotesk({
   subsets: ['latin'],
@@ -15,20 +16,72 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Sapphire Leadership & Advisory',
-  description:
-    "School consulting and advisory for CBSE affiliation to international curriculum integration — strategic blueprint for the world's next premier schools.",
-  metadataBase: new URL('https://example.com'),
+  metadataBase: new URL(getSiteUrl()),
+  title: {
+    default: siteName,
+    template: `%s | ${siteName}`,
+  },
+  description: defaultDescription,
+  applicationName: siteName,
+  authors: [{ name: siteName }],
+  creator: siteName,
+  publisher: siteName,
+  keywords: [
+    'school consulting',
+    'education advisory',
+    'school transformation',
+    'school governance',
+    'school growth strategy',
+    'affiliation support',
+    'leadership development',
+    'student advisory',
+    'teacher training',
+    'resources for schools',
+  ],
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
+  },
   icons: {
     icon: '/images/favicon.png',
     shortcut: '/images/favicon.png',
     apple: '/images/favicon.png',
   },
   openGraph: {
-    title: 'Sapphire Leadership & Advisory',
-    description:
-      'School consulting & advisory for new institutions and transformations.',
+    title: siteName,
+    description: defaultDescription,
     type: 'website',
+    url: siteUrl,
+    siteName,
+    locale: 'en_US',
+    images: [
+      {
+        url: '/images/horizontallogo.png',
+        width: 1200,
+        height: 630,
+        alt: siteName,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteName,
+    description: defaultDescription,
+    images: ['/images/horizontallogo.png'],
+  },
+  other: {
+    'theme-color': '#0b3b84',
   },
 };
 
@@ -46,6 +99,20 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         {children}
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: siteName,
+              url: siteUrl,
+              logo: `${siteUrl}/images/horizontallogo.png`,
+              description: defaultDescription,
+            }),
+          }}
+        />
       </body>
     </html>
   );

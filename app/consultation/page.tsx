@@ -7,9 +7,12 @@ import ConsultationBooking from '@/components/ConsultationBooking';
 import { Globe2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Book a Consultation | Sapphire Leadership & Advisory',
+  title: 'Book a School Strategy Consultation',
   description:
-    'Schedule a strategic consultation with Sapphire Leadership & Advisory.',
+    'Schedule a strategic consultation with Sapphire Leadership & Advisory for school growth, leadership development, and advisory support.',
+  alternates: {
+    canonical: '/consultation',
+  },
 };
 
 export default function ConsultationPage() {
