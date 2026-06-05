@@ -54,9 +54,18 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/images/favicon.png',
-    shortcut: '/images/favicon.png',
-    apple: '/images/favicon.png',
+    icon: [
+      {
+        url: '/images/favicon-lightbg.png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/images/favicon-darkbg.png',
+        media: '(prefers-color-scheme: dark)',
+      },
+    ],
+    shortcut: '/images/favicon-lightbg.png',
+    apple: '/images/favicon-lightbg.png',
   },
   openGraph: {
     title: siteName,
@@ -67,7 +76,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     images: [
       {
-        url: '/images/horizontallogo.png',
+        url: '/images/horizontallogo-lightbg.png',
         width: 1200,
         height: 630,
         alt: siteName,
@@ -78,7 +87,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: siteName,
     description: defaultDescription,
-    images: ['/images/horizontallogo.png'],
+    images: ['/images/horizontallogo-lightbg.png'],
   },
   other: {
     'theme-color': '#0b3b84',
@@ -108,27 +117,29 @@ export default function RootLayout({
               '@type': 'Organization',
               name: siteName,
               url: siteUrl,
-              logo: `${siteUrl}/images/horizontallogo.png`,
+              logo: `${siteUrl}/images/horizontallogo-lightbg.png`,
               description: defaultDescription,
             }),
           }}
         />
-        <script
-          type="text/javascript"
-          dangerouslySetInnerHTML={{
-            __html: `
-              var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-              (function() {
-                var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-                s1.async = true;
-                s1.src = 'https://embed.tawk.to/6a206c016d77da1c401dc899/1jq7abqml';
-                s1.charset = 'UTF-8';
-                s1.setAttribute('crossorigin', '*');
-                s0.parentNode.insertBefore(s1, s0);
-              })();
-            `,
-          }}
-        />
+        {process.env.NODE_ENV === 'production' ? (
+          <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html: `
+                var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+                (function() {
+                  var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+                  s1.async = true;
+                  s1.src = 'https://embed.tawk.to/6a206c016d77da1c401dc899/1jq7abqml';
+                  s1.charset = 'UTF-8';
+                  s1.setAttribute('crossorigin', '*');
+                  s0.parentNode.insertBefore(s1, s0);
+                })();
+              `,
+            }}
+          />
+        ) : null}
       </body>
     </html>
   );

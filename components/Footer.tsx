@@ -48,7 +48,7 @@ export default function Footer() {
             </span>
             <span className="hidden md:block">
               <Image
-                src="/images/horizontallogo.png"
+                src="/images/horizontallogo-lightbg.png"
                 alt="Sapphire Leadership & Advisory"
                 width={260}
                 height={58}

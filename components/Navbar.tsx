@@ -54,6 +54,8 @@ const teacherMenu = {
 };
 
 const whiteLogoSrc = '/images/whitelogo.png';
+const lightBgLogoSrc = '/images/horizontallogo-lightbg.png';
+const lightBgFaviconSrc = '/images/favicon-lightbg.png';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -198,10 +200,10 @@ function NavFrame({
             <Image
               src={
                 scrolled
-                  ? '/images/favicon.png'
+                  ? lightBgFaviconSrc
                   : whiteHeroHeader
                     ? whiteLogoSrc
-                    : '/images/horizontallogo.png'
+                    : lightBgLogoSrc
               }
               alt="Sapphire Leadership & Advisory"
               width={scrolled ? 36 : 260}
@@ -215,7 +217,7 @@ function NavFrame({
           </span>
           <span className="block md:hidden">
             <Image
-              src={whiteHeroHeader ? whiteLogoSrc : '/images/horizontallogo.png'}
+              src={whiteHeroHeader ? whiteLogoSrc : lightBgLogoSrc}
               alt="Sapphire Leadership & Advisory"
               width={180}
               height={42}
