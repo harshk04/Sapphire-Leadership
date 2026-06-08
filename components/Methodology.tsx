@@ -8,25 +8,25 @@ const steps = [
     number: '01',
     title: 'Discover',
     description:
-      'Deep-dive into stakeholder vision and local demographic requirements.',
+      'We begin by understanding your school context, priorities, and the leadership outcomes you want to strengthen.',
   },
   {
     number: '02',
-    title: 'Architect',
+    title: 'Design',
     description:
-      'Architectural planning and curriculum mapping customized for your goals.',
+      'We design a practical roadmap that aligns academic goals, leadership needs, and quality expectations.',
   },
   {
     number: '03',
-    title: 'Deploy',
+    title: 'Empower',
     description:
-      'Rigorous execution of licensing, staffing, and marketing strategies.',
+      'We equip teams with the tools, coaching, and clarity needed to move from planning into confident action.',
   },
   {
     number: '04',
-    title: 'Deliver',
+    title: 'Transform',
     description:
-      'Launch operations and transition to sustainable management frameworks.',
+      'We help translate the strategy into measurable change, stronger systems, and visible institutional progress.',
   },
 ];
 
@@ -43,8 +43,8 @@ export default function Methodology() {
           The Sapphire Methodology
         </h2>
         <p className="mt-3 text-[13px] leading-6 text-white/70 md:text-[14px]">
-          Our proprietary four-step approach ensures your institution is built on
-          a foundation of excellence and sustainability.
+          Our four-step approach keeps every engagement focused on clarity,
+          capability, and meaningful educational change.
         </p>
       </div>
 

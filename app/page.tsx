@@ -12,7 +12,7 @@ import type { Metadata } from 'next';
 import { defaultDescription, siteName, siteUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'School Consulting & Advisory for Growth',
+  title: 'Empowering Leaders. Transforming Education.',
   description: defaultDescription,
   alternates: {
     canonical: '/',

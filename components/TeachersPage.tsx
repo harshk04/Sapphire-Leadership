@@ -15,9 +15,9 @@ import {
 } from 'lucide-react';
 
 export const teachersPageMetadata: Metadata = {
-  title: 'For Teachers: Professional Development & Leadership',
+  title: 'For Teachers: Professional Growth & Leadership',
   description:
-    'Teacher training, leadership pathways, wellbeing programs, and academic coaching for high-performing schools.',
+    'Professional growth pathways for teachers, coordinators, and aspiring leaders through classroom excellence and leadership development.',
   alternates: {
     canonical: '/teacherspage',
   },
@@ -26,67 +26,67 @@ export const teachersPageMetadata: Metadata = {
 const programs = [
   {
     icon: BookOpen,
-    title: 'Teacher Training',
-    desc: 'Hands-on pedagogy workshops and classroom management systems for modern teaching.',
+    title: 'Teaching Excellence',
+    desc: 'Focused learning that sharpens lesson planning, engagement, assessment, and day-to-day classroom delivery.',
   },
   {
     icon: Users,
-    title: 'Classroom Management',
-    desc: 'Frameworks for building high-engagement learning environments and leading diverse groups.',
+    title: 'Classroom Leadership',
+    desc: 'Practical strategies for leading learning spaces with confidence, structure, and stronger student participation.',
   },
   {
     icon: Lightbulb,
     title: 'Instructional Coaching',
-    desc: 'One-to-one observation, feedback, and practice cycles to refine delivery and impact.',
+    desc: 'One-to-one feedback and reflection cycles that support growth, consistency, and measurable teaching impact.',
   },
 ];
 
 const readiness = [
   {
-    title: 'Aspiring Leaders Track',
-    desc: 'A multi-modal program for teachers eyeing vice principal or principal positions.',
+    title: 'Emerging Leaders Path',
+    desc: 'Designed for teachers preparing to move into coordinator, head of department, or leadership roles.',
   },
   {
-    title: 'Academic Coordinator Bootcamps',
-    desc: 'Master scheduling, curriculum mapping, and departmental oversight.',
+    title: 'Coordinator Leadership',
+    desc: 'Build the skills needed for curriculum oversight, team coordination, and academic planning.',
   },
   {
-    title: 'Conflict Resolution for Leads',
-    desc: 'Navigating stakeholder relationships and team dynamics with confidence.',
+    title: 'Influence & Communication',
+    desc: 'Strengthen presence, communication, and stakeholder alignment in high-responsibility school roles.',
   },
 ];
 
 const certifications = [
   {
     badge: 'PROFESSIONAL',
-    title: 'Master Educator (ME)',
-    desc: 'Advanced classroom practice certification with research component.',
-    meta: ['12 Months', 'Level 1'],
+    title: 'Master Teacher Pathway',
+    desc: 'A structured pathway for deepening classroom practice, reflection, and instructional confidence.',
+    meta: ['12 Weeks', 'Level 1'],
   },
   {
     badge: 'LEADERSHIP',
-    title: 'Department Head Cert',
-    desc: 'Strategic oversight, budgeting, and academic performance tracking.',
-    meta: ['6 Months', 'Level 2'],
+    title: 'Department Leadership Program',
+    desc: 'Preparation for academic coordination, planning, and team leadership within a school setting.',
+    meta: ['8 Weeks', 'Level 2'],
   },
   {
     badge: 'SPECIALIST',
-    title: 'EdTech Strategist',
-    desc: 'Mastery of AI integration and hybrid learning architectures.',
-    meta: ['4 Months', 'Level 1'],
+    title: 'AI & Digital Learning',
+    desc: 'Practical use of technology and AI to support planning, feedback, and modern learning design.',
+    meta: ['6 Weeks', 'Level 1'],
   },
   {
     badge: 'EXECUTIVE',
-    title: 'Executive Principalship',
-    desc: 'Highest tier certification for multi-school and system leadership.',
-    meta: ['18 Months', 'Level 3'],
+    title: 'Executive Readiness',
+    desc: 'Advanced leadership preparation for vice principals, principals, and wider school leadership roles.',
+    meta: ['10 Weeks', 'Level 3'],
   },
 ];
 
 const testimonials = [
   {
     quote:
-      'The Master Educator program completely shifted my approach to student engagement.',
+      'The program gave me practical tools to teach with more confidence and connect better with my students.',
     author: 'Dr. Sarah Jenkins',
     role: 'Senior Faculty, International Academy',
     image:
@@ -94,7 +94,7 @@ const testimonials = [
   },
   {
     quote:
-      'The Leadership Readiness track gave me the tools I needed to manage my team with confidence.',
+      'The leadership pathway helped me step into coordination with more clarity, structure, and confidence.',
     author: 'Markus Thorne',
     role: "Academic Coordinator, St. Jude's Prep",
     image:
@@ -102,7 +102,7 @@ const testimonials = [
   },
   {
     quote:
-      'The instructional coaching sessions were the most transformative professional development I have experienced.',
+      'The coaching sessions sharpened my practice and made a visible difference in my classroom outcomes.',
     author: 'Elena Rodriguez',
     role: 'Lead Instructor, Horizon Science School',
     image:
@@ -123,15 +123,14 @@ export default function TeachersPage() {
           <div className="relative mx-auto grid max-w-container items-center gap-12 px-5 md:grid-cols-[1.05fr_0.95fr] md:px-10">
             <div>
               <span className="inline-flex rounded-full bg-gold px-4 py-1 text-[11px] font-semibold tracking-[0.14em] text-ink">
-                PREMIER EDUCATOR SUPPORT
+                PROFESSIONAL GROWTH PATHWAYS
               </span>
               <h1 className="mt-6 max-w-xl font-display text-4xl font-semibold leading-[1.05] tracking-[-0.03em] text-primary md:text-6xl">
-                Empowering educators for excellence.
+                Grow from teacher to school leader.
               </h1>
               <p className="mt-5 max-w-xl text-[14px] leading-7 text-ink-muted md:text-[16px]">
-                Advanced pedagogical frameworks and elite advisory services
-                designed to transform classroom dynamics and accelerate academic
-                leadership careers.
+                Professional learning pathways designed to strengthen classroom
+                practice and prepare educators for leadership roles.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link
@@ -165,8 +164,8 @@ export default function TeachersPage() {
                     Professional Development
                   </p>
                   <h2 className="mt-3 max-w-md font-display text-2xl font-semibold leading-tight md:text-3xl">
-                    High-touch support for teachers, coordinators, and academic
-                    leaders.
+                    High-touch support for teachers, coordinators, and emerging
+                    school leaders.
                   </h2>
                 </div>
               </div>
@@ -181,7 +180,7 @@ export default function TeachersPage() {
                 Service modules
               </h2>
               <p className="mx-auto mt-3 max-w-2xl text-[13px] leading-6 text-ink-muted md:text-[14px]">
-                Tailored support for teachers and instructional leaders.
+                Tailored support for teachers, coordinators, and school leaders.
               </p>
             </div>
 
@@ -223,7 +222,7 @@ export default function TeachersPage() {
                         href="/consultation"
                         className="mt-6 inline-flex items-center gap-2 font-semibold text-primary"
                       >
-                        Learn more about this phase
+                        Learn more about this module
                         <ChevronRight size={16} />
                       </Link>
                     </div>
@@ -241,12 +240,12 @@ export default function TeachersPage() {
                 Leadership readiness
               </span>
               <h2 className="mt-4 max-w-lg font-display text-3xl font-semibold leading-tight md:text-4xl">
-                Transitioning from the classroom to administration requires a
-                new set of strategic muscles.
+                Moving from teacher to coordinator or principal requires a new
+                kind of leadership preparation.
               </h2>
               <p className="mt-5 max-w-xl text-[14px] leading-7 text-white/78 md:text-[15px]">
-                Our readiness tracks prepare the next generation of academic
-                architects.
+                Our readiness tracks prepare educators for the responsibilities
+                of leading teams, programs, and whole-school improvement.
               </p>
             </div>
 
@@ -262,7 +261,7 @@ export default function TeachersPage() {
               <div className="absolute -bottom-8 left-8 glass rounded-xl p-5 text-ink shadow-2xl">
                 <div className="text-3xl font-bold text-primary">150+</div>
                 <div className="text-[12px] text-ink-muted">
-                  Coordinators promoted annually
+                  Educators advancing annually
                 </div>
               </div>
             </div>
@@ -294,14 +293,15 @@ export default function TeachersPage() {
             <div className="flex items-end justify-between gap-6">
               <div>
                 <h2 className="font-display text-[26px] font-semibold tracking-[-0.02em] text-white md:text-[34px]">
-                  Elite certifications
+                  Professional development pathways
                 </h2>
                 <p className="mt-3 max-w-xl text-[13px] leading-6 text-white/70 md:text-[14px]">
-                  Formalize your expertise with globally recognized credentials.
+                  Build your growth through structured pathways designed for
+                  classroom excellence and leadership readiness.
                 </p>
               </div>
               <button className="rounded-full border border-gold/30 px-6 py-2 text-[11px] font-semibold tracking-tight text-gold">
-                View Requirements
+                View Pathways
               </button>
             </div>
             <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -330,7 +330,7 @@ export default function TeachersPage() {
           <div className="mx-auto max-w-container px-5 md:px-10">
             <div className="text-center">
               <h2 className="font-display text-[26px] font-semibold tracking-[-0.02em] text-primary md:text-[34px]">
-                Voices of success
+                Voices of growth
               </h2>
             </div>
             <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -373,11 +373,11 @@ export default function TeachersPage() {
               <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-gold/10 blur-3xl" />
               <div className="relative z-10">
                 <h2 className="font-display text-4xl font-semibold text-white md:text-6xl">
-                  Upgrade your teaching career
+                  Advance your leadership journey
                 </h2>
                 <p className="mx-auto mt-6 max-w-2xl text-[14px] leading-7 text-primary-fixed md:text-[16px]">
-                  Step into the next phase of your professional journey with the
-                  support of global leadership advisors.
+                  Explore the next phase of your professional journey with
+                  strategic guidance for growth, leadership, and excellence.
                 </p>
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
                   <Link

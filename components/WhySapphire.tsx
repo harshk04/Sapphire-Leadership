@@ -8,39 +8,39 @@ import { motion, useReducedMotion } from 'framer-motion';
 const items = [
   {
     icon: Gavel,
-    title: 'Regulatory Expertise',
+    title: 'Leadership Excellence',
     description:
-      'Navigating complex education boards and licensing requirements with 100% success rates.',
+      'Strengthening school leadership with practical coaching, clear decision-making, and sustained institutional performance.',
     variant: 'card',
   },
   {
     icon: BarChart3,
-    title: 'Data-Driven Growth',
+    title: 'School Transformation',
     description:
-      'We utilize demographic analytics and market intelligence to ensure your school is positioned for maximum enrollment from day one.',
+      'Turning school goals into a measurable improvement plan that raises standards, sharpens systems, and builds confidence.',
     variant: 'featured',
-    metric: '98%',
-    metricLabel: 'Enrollment Fulfillment',
+    metric: '92%',
+    metricLabel: 'Improvement Milestones Met',
   },
   {
     icon: LayoutGrid,
-    title: 'Campus Design',
+    title: 'Teacher Development',
     description:
-      'Creating spaces that foster curiosity and safety through ergonomic and sustainable design.',
+      'Equipping teachers with professional learning that improves classroom practice, collaboration, and learner engagement.',
     variant: 'card',
   },
   {
     icon: Globe2,
-    title: 'Global Benchmarking',
+    title: 'International Standards',
     description:
-      'We align your institution with international standards, preparing students for success in a globalized academic landscape.',
+      'Aligning policies, learning priorities, and quality indicators with internationally respected school standards.',
     variant: 'wide',
   },
   {
     icon: BarChart3,
-    title: 'Operational Governance',
+    title: 'Strategic Advisory',
     description:
-      'Aligning teams, timelines, and accountability structures so growth stays organized and measurable.',
+      'Providing board-level insight on governance, academic direction, and long-term educational growth.',
     variant: 'card',
   },
 ];
@@ -52,10 +52,10 @@ export default function WhySapphire() {
     <SectionShell className="bg-surface-low" id="why">
       <div className="text-center">
         <h2 className="[font-family:var(--font-hanken)] text-[26px] font-semibold tracking-[-0.02em] text-primary md:text-[30px]">
-          Why Sapphire Consulting?
+          Why Sapphire
         </h2>
         <p className="mt-3 text-[12px] text-ink-muted">
-          Elevating educational standards through meticulous planning.
+          Trusted advisory for schools, educators, and leaders committed to lasting growth.
         </p>
       </div>
 

@@ -5,24 +5,24 @@ import { useId, useState } from 'react';
 
 const faqs = [
   {
-    q: 'How long does the CBSE affiliation process take?',
-    a: 'Typically, the process takes 12–18 months. We manage the entire documentation, inspection preparation, and follow-up sequence to minimize delays.',
+    q: 'How do you support school improvement?',
+    a: 'We begin with a focused review of priorities, systems, and outcomes, then shape an improvement path that is practical and measurable.',
   },
   {
-    q: 'Do you provide recruitment for school principals?',
-    a: 'Yes, our leadership search service specializes in identifying and vetting high-caliber academic leaders who align with your institutional vision.',
+    q: 'Do you offer leadership coaching?',
+    a: 'Yes. We coach principals, coordinators, and aspiring leaders through planning, team alignment, and stronger decision-making.',
   },
   {
-    q: 'Can you help with existing school turnarounds?',
-    a: 'Absolutely. We conduct deep-dive audits of current operations and academic performance to implement strategic pivot plans for underperforming institutions.',
+    q: 'Can you support accreditation work?',
+    a: 'Absolutely. We help schools prepare evidence, strengthen internal systems, and align daily practice with quality standards.',
   },
   {
-    q: 'Do you support schools beyond the launch phase?',
-    a: 'Yes. We provide ongoing advisory for enrollment strategy, leadership alignment, and operational improvements after opening day.',
+    q: 'Do you work with teacher development programs?',
+    a: 'Yes. Our learning pathways build teaching confidence, instructional consistency, and a stronger culture of professional growth.',
   },
   {
-    q: 'Can you work with schools pursuing international curricula?',
-    a: 'We can. Our advisory covers CBSE, ICSE, and IB-aligned planning, including academic structure, staffing, and readiness support.',
+    q: 'Can you work with international schools?',
+    a: 'We can. Our advisory supports international schools with leadership planning, quality assurance, and academic alignment.',
   },
 ];
 

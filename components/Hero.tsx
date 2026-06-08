@@ -77,7 +77,7 @@ export default function Hero() {
             <Building2 className="h-4 w-4" />
             <span className="font-semibold text-white">15,000+</span>
           </span>
-          <span className="text-white/86">schools</span>
+          <span className="text-white/86">school leaders</span>
         </motion.div>
 
         <motion.h1
@@ -86,9 +86,9 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: 'easeOut', delay: 0.08 }}
           className="mt-8 max-w-[12ch] text-balance font-display text-[clamp(3.25rem,7.6vw,7rem)] font-semibold leading-[0.93] tracking-[-0.055em] text-white drop-shadow-[0_10px_18px_rgba(14,33,67,0.22)] md:max-w-[13ch]"
         >
-          School Consulting
+          Leadership
           <br />
-          &amp; Advisory
+          &amp; Transformation
         </motion.h1>
 
         <motion.p
@@ -97,9 +97,8 @@ export default function Hero() {
           transition={{ duration: 0.75, ease: 'easeOut', delay: 0.16 }}
           className="mt-7 max-w-[58ch] text-balance text-[15px] font-medium leading-7 text-white/82 drop-shadow-[0_6px_12px_rgba(14,33,67,0.18)] md:text-[18px] md:leading-8"
         >
-          We design, train, and place educators and school leaders for ambitious
-          institutions across 50+ countries, with a premium advisory model that
-          feels calm, credible, and future-ready.
+          We guide schools, educators, and leaders through growth, advisory,
+          and transformation with a premium model built for long-term impact.
         </motion.p>
 
         <motion.div
@@ -112,13 +111,13 @@ export default function Hero() {
             href="/teacherspage"
             className="inline-flex min-w-[210px] items-center justify-center rounded-full bg-white px-8 py-4 text-[15px] font-semibold text-navy shadow-[0_18px_40px_rgba(7,27,58,0.18)] transition-transform duration-200 hover:-translate-y-0.5"
           >
-            I&apos;m a Teacher
+            For Teachers
           </a>
           <a
             href="/schools"
             className="inline-flex min-w-[210px] items-center justify-center rounded-full border border-white/18 bg-white/18 px-8 py-4 text-[15px] font-semibold text-white backdrop-blur-md transition-colors duration-200 hover:bg-white/24"
           >
-            I&apos;m a School
+            For Schools
           </a>
         </motion.div>
 
@@ -129,7 +128,7 @@ export default function Hero() {
           className="mt-6 inline-flex items-center gap-2 rounded-full bg-white/12 px-5 py-2 text-[13px] font-medium text-white/82 backdrop-blur-md"
         >
           <UsersRound className="h-4 w-4" />
-          Free career consultation available for teachers
+          Strategy consultation for educators and school leaders
         </motion.div>
       </div>
 

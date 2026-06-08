@@ -7,32 +7,32 @@ import { motion, useReducedMotion } from 'framer-motion';
 
 const modules = [
   {
-    title: 'Phase I: Conceptualization & Feasibility',
+    title: 'Leadership Development',
     description:
-      "Detailed market research, competitive analysis, and financial forecasting to define the project's viability and unique value proposition.",
-    image: '/images/service-left.png',
-    accent: 'Planning',
+      'Coaching for senior leaders focused on vision, decision-making, team alignment, and sustained school-wide improvement.',
+    image: '/images/leadershipdevelopment.jpeg',
+    accent: 'Leadership',
   },
   {
-    title: 'Phase II: Academic Framework & Affiliation',
+    title: 'School Improvement',
     description:
-      'Developing the core curriculum, teacher training programs, and managing the entire board affiliation process (CBSE/ICSE/IB).',
-    image: '/images/service-right.png',
-    accent: 'Academics',
+      'Practical advisory to strengthen academic systems, quality assurance, and the routines that shape school excellence.',
+    image: '/images/schoolconsultancy.jpeg',
+    accent: 'Quality',
   },
   {
-    title: 'Phase III: Campus & Operations Design',
+    title: 'Teacher Professional Learning',
     description:
-      'Shaping facilities, workflows, and operational systems that support safety, scalability, and a premium school experience.',
-    image: '/images/service-modules.png',
-    accent: 'Infrastructure',
+      'Professional learning journeys that build classroom confidence, instructional skill, and a stronger culture of collaboration.',
+    image: '/images/teacherpl.jpeg',
+    accent: 'Learning',
   },
   {
-    title: 'Phase IV: Launch & Growth Strategy',
+    title: 'Student Success & Future Readiness',
     description:
-      'Building enrollment momentum through brand positioning, admissions planning, and a structured post-launch growth roadmap.',
-    image: '/images/architecture-photo.png',
-    accent: 'Growth',
+      'Programs that connect academic purpose with future readiness, helping students grow with clarity, confidence, and direction.',
+    image: '/images/studentsuccess.jpeg',
+    accent: 'Future',
   },
 ];
 
@@ -80,7 +80,7 @@ export default function ServiceModules() {
                 href="#consultation"
                 className="mt-5 inline-flex items-center gap-2 text-[13px] font-semibold text-primary transition-all group-hover:gap-3"
               >
-                Learn more about this phase <ArrowRight className="h-4 w-4" />
+                Learn more about this module <ArrowRight className="h-4 w-4" />
               </a>
             </div>
           </motion.div>

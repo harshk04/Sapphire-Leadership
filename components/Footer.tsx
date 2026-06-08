@@ -57,8 +57,8 @@ export default function Footer() {
             </span>
           </Link>
           <p className="mt-3 text-[13px] leading-6 text-ink-muted">
-            Defining the future of global leadership and academic excellence
-            through strategic advisory.
+            Empowering leaders and transforming education through strategic
+            advisory, school improvement, and professional learning.
           </p>
         </div>
 

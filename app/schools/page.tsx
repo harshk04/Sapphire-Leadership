@@ -10,9 +10,9 @@ import ServiceModules from '@/components/ServiceModules';
 import WhySapphire from '@/components/WhySapphire';
 
 export const metadata: Metadata = {
-  title: 'For Schools: Consulting, Affiliation & Growth',
+  title: 'For Schools: School Improvement & Advisory',
   description:
-    'Explore Sapphire Leadership & Advisory’s consulting support for school planning, affiliation, growth, governance, and transformation.',
+    'Explore Sapphire Leadership & Advisor’s support for school improvement, accreditation, strategic planning, governance, and academic excellence.',
   alternates: {
     canonical: '/schools',
   },
@@ -30,12 +30,12 @@ export default function SchoolsPage() {
               FOR SCHOOLS
             </span>
             <h1 className="mx-auto mt-6 max-w-4xl font-display text-4xl font-semibold leading-[1.05] tracking-[-0.03em] text-white md:text-6xl">
-              Build, scale, and elevate your school with strategic advisory.
+              Strengthen your school with strategic educational advisory.
             </h1>
             <p className="mx-auto mt-5 max-w-2xl text-[14px] leading-7 text-white/82 md:text-[16px]">
-              From feasibility and affiliation to campus planning, enrollment
-              strategy, and operational excellence, we help schools move from
-              concept to confident growth.
+              From school improvement and accreditation to leadership
+              development, governance, and academic excellence, we help schools
+              move with clarity and confidence.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link
@@ -65,11 +65,11 @@ export default function SchoolsPage() {
             <FAQ />
             <div className="rounded-lg border border-surface-variant/40 bg-white/70 p-7 shadow-sm md:p-10">
               <h2 className="[font-family:var(--font-hanken)] text-2xl font-semibold tracking-[-0.02em] text-primary">
-                Ready to talk schools?
+                Ready to talk strategy?
               </h2>
               <p className="mt-3 text-[13px] leading-6 text-ink-muted">
-                Tell us about your school vision, and we’ll map the right
-                advisory path for your team.
+                Tell us about your school goals, and we’ll shape a focused path
+                for leadership and institutional growth.
               </p>
               <Link
                 href="/consultation"

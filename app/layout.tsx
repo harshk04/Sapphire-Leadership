@@ -27,15 +27,15 @@ export const metadata: Metadata = {
   creator: siteName,
   publisher: siteName,
   keywords: [
-    'school consulting',
+    'school improvement',
     'education advisory',
     'school transformation',
     'school governance',
     'school growth strategy',
-    'affiliation support',
+    'accreditation support',
     'leadership development',
     'student advisory',
-    'teacher training',
+    'teacher professional learning',
     'resources for schools',
   ],
   alternates: {

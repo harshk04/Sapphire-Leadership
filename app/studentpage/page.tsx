@@ -113,7 +113,7 @@ export default function StudentPage() {
                 alt="Students collaborating"
                 width={900}
                 height={1125}
-                className="relative aspect-[4/5] w-full rounded-3xl object-cover shadow-lift"
+                className="relative aspect-[16/10] w-full rounded-3xl object-cover shadow-lift"
               />
             </div>
           </div>

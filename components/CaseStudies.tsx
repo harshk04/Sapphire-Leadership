@@ -17,25 +17,25 @@ type CaseStudy = {
 const studies: CaseStudy[] = [
   {
     org: 'Emerald International Academy',
-    tag: 'CBSE AFFILIATION & INFRASTRUCTURE',
+    tag: 'SCHOOL TRANSFORMATION & LEADERSHIP',
     quote:
-      "\"Sapphire's strategic insight transformed our vision from a local school to a regional benchmark for excellence within 18 months.\"",
+      '"Sapphire helped us reset our improvement priorities, strengthen leadership routines, and create a clearer academic culture across the school."',
     metrics: [
-      { value: '2.5x', label: 'Enrollment Growth' },
-      { value: '100%', label: 'Compliance Score' },
+      { value: '18', label: 'Months of Progress' },
+      { value: '94%', label: 'Quality Targets Met' },
     ],
-    image: '/images/case-photo.png',
+    image: '/images/eis.jpeg',
   },
   {
     org: 'Northbridge Learning Campus',
-    tag: 'ACADEMIC DESIGN & MARKET POSITIONING',
+    tag: 'ACADEMIC EXCELLENCE & QUALITY ASSURANCE',
     quote:
-      '"The clarity of their roadmap de-risked every decision — from curriculum to admissions funnel."',
+      '"Their advisory gave our leadership team a practical plan for improvement, with measurable gains in teaching quality and parent confidence."',
     metrics: [
-      { value: '42%', label: 'Lead-to-Visit' },
-      { value: '9.2', label: 'Parent NPS' },
+      { value: '30%', label: 'Observed Practice Growth' },
+      { value: '4.8/5', label: 'Stakeholder Feedback' },
     ],
-    image: '/images/case-photo.png',
+    image: '/images/nb.jpeg',
   },
 ];
 
@@ -70,7 +70,7 @@ export default function CaseStudies() {
             Transformations in Action
           </h2>
           <p className="mt-3 text-[12px] text-ink-muted">
-            Real results from our school consulting partnerships.
+            Real progress from school improvement and leadership advisory work.
           </p>
         </div>
 

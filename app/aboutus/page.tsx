@@ -6,9 +6,9 @@ import Navbar from '@/components/Navbar';
 import { Globe2, Lightbulb, ShieldCheck, Sparkles, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About Sapphire Leadership & Advisory',
+  title: 'About Dr. Sunil Kumawat',
   description:
-    'Learn about Sapphire Leadership & Advisory, our values, advisory team, and global footprint in school consulting and leadership advisory.',
+    'Learn about Dr. Sunil Kumawat, Mathematics Educator, academic leader, researcher, and the professional voice behind Sapphire Leadership Advisor.',
   alternates: {
     canonical: '/aboutus',
   },
@@ -18,46 +18,46 @@ const values = [
   {
     icon: Sparkles,
     title: 'Excellence',
-    desc: 'Setting a global benchmark for educational leadership and growth.',
+    desc: 'Deep subject knowledge, strong classroom practice, and a clear focus on student progress.',
   },
   {
     icon: ShieldCheck,
     title: 'Integrity',
-    desc: 'Unwavering ethical standards in every consultation and roadmap.',
+    desc: 'A steady commitment to ethical teaching, professional learning, and responsible leadership.',
   },
   {
     icon: Lightbulb,
     title: 'Innovation',
-    desc: 'High-tech pedagogical approaches with a respect for strong tradition.',
+    desc: 'Research-informed teaching, thoughtful technology use, and practical educational improvement.',
   },
 ];
 
 const leaders = [
   {
-    role: 'FOUNDING PARTNER',
-    name: 'Dr. Alistair Thorne',
-    desc: '20 years of expertise in Oxbridge-level governance and policy.',
+    role: 'MATHEMATICS EDUCATOR',
+    name: 'Dr. Sunil Kumawat',
+    desc: 'An enthusiastic Mathematics Educator at Jayshree Periwal International School, Jaipur, with a Ph.D. from Manipal University.',
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuCVbhVNeFDGxYqMD2B0_MjUYvweoKmyMo3ETWijZM_cKGjqoPzqMWf3nQrXpwit34rGRnryrCJjRv7BpCHBJ_3-y9dX2hVCyBu1052X270j9c-vZMNuWRYpva2IjS__ii3p_euobgyBvGwbGqgUZjhoCScd0VFphwr4MkLA-YXoelccflSgiS2GIhvXuYEWH-cyF8CdWpcWKnYNnlvhNvb1_3bA0ol8nOQUY8I9OK03ZgC8BPoTuxahr7GYHn0pchRsaYxM12hUvY2T',
   },
   {
-    role: 'MANAGING DIRECTOR',
-    name: 'Elena Vance',
-    desc: 'Former Ivy League dean specializing in student engagement models.',
+    role: 'ACADEMIC PRINCIPAL',
+    name: 'Curriculum Development',
+    desc: 'At Scholars International School, he focused on curriculum development and effective teaching methods.',
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuDUZEEuX3woTIN9KwFflgQkLiYEWkZMReIg1l8-EsNZN35C1wDkEJ-FecscuM-HOQk6T-BoXb24MV-rCp6RXHEwnj8VmqC-sGcOtGRuMJqxewSG_K3S4lNlBHLc4c0A_WTiB06fJ7hJBxKV6pE0DCPqzIgB_qKmp-kdX5M7TIZM9zhTwLNTQzEvb3_QuSUZ6KrJ7hAOPI7HVDZA3XsTKvKu3kUgkenN-lWdpk84EAheMFWe7ZB3kRQUZRekPUHUL5A5IR6Ax0krXLLy',
   },
   {
-    role: 'HEAD OF INNOVATION',
-    name: 'Marcus Wu',
-    desc: 'EdTech pioneer integrating AI and personalized learning paths.',
+    role: 'HEAD OF DEPARTMENT',
+    name: 'Student Performance',
+    desc: 'At Air Force School, he emphasized student performance analysis and continuous improvement.',
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuD82Zcjv4KBEpdFDpyz2PyHLO71UKUBk-EsHRYwzEiKfJJoH0gAQEeS4XXj4CFwtTMnE23ZBTenZapfhSMwlFodJmkkewLP3de3ClNuEkY5bprI_aeuumHL245ookC24EsTs-4E_oCwtEP2s3g2OcFpKrdJM5DRnstOodikXQHrMg_sfMwFEJAZik4sfRPgU0MLRNtJfYgbg21YJSDNJt1J8R0okId9iJqzZvO6TBpwc08JK6pgFCkSM399Fv3snPP8GyAqciCTZI0Q',
   },
   {
-    role: 'STRATEGY PARTNER',
-    name: 'Dr. Sarah Jenkins',
-    desc: 'Specialist in faculty development and emotional intelligence in leadership.',
+    role: 'RESEARCH & INNOVATION',
+    name: 'Professional Growth',
+    desc: 'Microsoft Certified Educator, member of The Association of Mathematics Teachers of India, author, and patent holder.',
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuAn3i8Cj45o7KpV7NT7hy9xBcLZTwIX6cXJw4TlzWD2oFuv9ZEoRhBQrSzf6AkUZHugme3ciupL17mYFVcr_nNqjg3pnWyCtKcp9uDUJp8hng_cm6cZHtk1YnTu_PI8Dqas0KTgKDJ_sSEqvDTPcQUAfL0cIdT-8dPNIdgxhril_wkBwbDMM1-xsDW0ALbO4vRXmLOsySpbuilH2pgZqPj1ZkmfpJJDg6bM6ldNjU8Fx1atjpWOZy6r3aS2-k5Mh9TT5WPouejMxyqL',
   },
@@ -75,29 +75,32 @@ export default function AboutUsPage() {
           </div>
           <div className="relative mx-auto max-w-container px-5 text-center md:px-10">
             <span className="inline-flex rounded-full bg-gold/20 px-4 py-1 text-[11px] font-semibold tracking-[0.14em] text-gold">
-              OUR SHARED VISION
+              ABOUT DR. SUNIL KUMAWAT
             </span>
             <h1 className="mt-6 font-display text-4xl font-semibold leading-[1.05] tracking-[-0.03em] text-white md:text-6xl">
-              Transforming schools.
+              Mathematics, leadership,
               <br />
-              <span className="text-primary-fixed">Empowering leaders.</span>
+              <span className="text-primary-fixed">and continuous learning.</span>
             </h1>
             <p className="mx-auto mt-5 max-w-2xl text-[14px] leading-7 text-primary-fixed/80 md:text-[16px]">
-              We bridge the gap between institutional tradition and future-ready
-              innovation through bespoke advisory and leadership excellence.
+              Dr. Sunil Kumawat is a Mathematics Educator and academic leader
+              whose work combines teaching excellence, curriculum leadership,
+              research, and professional growth.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link
                 href="/consultation"
                 className="rounded-full bg-gold px-6 py-3 text-[11px] font-semibold tracking-tight text-ink"
               >
-                Meet the Team
+                Meet Dr. Sunil
               </Link>
               <Link
-                href="/contact"
+                href="/images/Udyam%20Registration%20Certificate.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full border border-white/20 bg-white/10 px-6 py-3 text-[11px] font-semibold tracking-tight text-white"
               >
-                Global Offices
+                Udyam Certificate
               </Link>
             </div>
           </div>
@@ -110,7 +113,7 @@ export default function AboutUsPage() {
                 Core values
               </h2>
               <p className="mt-3 text-[13px] leading-6 text-ink-muted md:text-[14px]">
-                The principles that guide our institutional advisory.
+                The principles that guide his teaching, leadership, and research.
               </p>
             </div>
             <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -139,15 +142,16 @@ export default function AboutUsPage() {
             <div className="flex flex-col items-end justify-between gap-6 md:flex-row">
               <div className="max-w-xl">
                 <h2 className="font-display text-[26px] font-semibold tracking-[-0.02em] text-ink md:text-[34px]">
-                  Visionary leadership
+                  Academic leadership journey
                 </h2>
                 <p className="mt-3 text-[13px] leading-6 text-ink-muted md:text-[14px]">
-                  Guided by a diverse cohort of global educators, strategists,
-                  and policy makers dedicated to school transformation.
+                  From mathematics instruction to principal-level leadership,
+                  Dr. Sunil&apos;s journey reflects disciplined growth and
+                  measurable improvement.
                 </p>
               </div>
               <button className="rounded-full border-2 border-primary px-6 py-3 text-[11px] font-semibold tracking-tight text-primary hover:bg-primary hover:text-white">
-                View Full Advisory Board
+                View Profile Highlights
               </button>
             </div>
 
@@ -162,9 +166,9 @@ export default function AboutUsPage() {
                       className="object-cover grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0"
                       sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy/35 to-transparent" />
-                  </div>
-                  <div className="absolute inset-x-0 bottom-0 p-6">
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/35 to-transparent" />
+                </div>
+                <div className="absolute inset-x-0 bottom-0 p-6">
                     <div className="glass translate-y-4 rounded-xl p-5 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                       <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-gold">
                         {leader.role}
@@ -187,18 +191,18 @@ export default function AboutUsPage() {
           <div className="mx-auto grid max-w-container gap-12 px-5 md:grid-cols-[0.95fr_1.05fr] md:px-10">
             <div>
               <h2 className="font-display text-[26px] font-semibold tracking-[-0.02em] text-ink md:text-[34px]">
-                Global footprint
+                Professional credentials
               </h2>
               <p className="mt-3 max-w-lg text-[13px] leading-6 text-ink-muted md:text-[14px]">
-                Our advisory teams operate from key educational hubs across four
-                continents, ensuring local insight with global perspective.
+                A glance at the affiliations, publications, and recognitions
+                behind his academic practice.
               </p>
               <div className="mt-8 space-y-4">
                 {[
-                  ['London, UK', 'Global Headquarters'],
-                  ['Singapore', 'APAC Regional Hub'],
-                  ['New York, USA', 'Americas Strategy Office'],
-                  ['Dubai, UAE', 'MENA Advisory Centre'],
+                  ['Ph.D. in Mathematics', 'Manipal University'],
+                  ['Microsoft Certified Educator', 'Technology-enabled teaching'],
+                  ['Association Member', 'The Association of Mathematics Teachers of India'],
+                  ['Published & Patented', 'Research papers and innovation'],
                 ].map(([city, label], index) => (
                   <div
                     key={city}
@@ -220,14 +224,41 @@ export default function AboutUsPage() {
 
             <div className="relative flex min-h-[560px] items-center justify-center overflow-hidden rounded-3xl bg-primary/5 p-8">
               <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary to-transparent" />
-              <div className="glass relative flex h-full w-full flex-col items-center justify-center rounded-2xl p-12 text-center">
-                <Users className="mb-8 h-20 w-20 text-primary/20" />
-                <h3 className="font-display text-3xl font-semibold text-primary">
-                  Interconnected excellence
-                </h3>
-                <p className="mt-4 max-w-md text-[14px] leading-7 text-ink-muted">
-                  Deploying teams within 48 hours to any region globally.
-                </p>
+              <div className="glass relative flex h-full w-full flex-col overflow-hidden rounded-2xl p-6 text-center">
+                <div className="flex items-center justify-between gap-4">
+                  <div className="text-left">
+                    <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-primary/70">
+                      Udyam Registration
+                    </div>
+                    <h3 className="font-display text-2xl font-semibold text-primary">
+                      Certificate
+                    </h3>
+                  </div>
+                  <Link
+                    href="/images/Udyam%20Registration%20Certificate.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full bg-primary px-4 py-2 text-[11px] font-semibold text-white"
+                  >
+                    Open PDF
+                  </Link>
+                </div>
+                <object
+                  data="/images/Udyam%20Registration%20Certificate.pdf"
+                  type="application/pdf"
+                  className="mt-5 h-[460px] w-full rounded-xl border border-surface-variant bg-white"
+                >
+                  <div className="flex h-full items-center justify-center p-6">
+                    <div>
+                      <p className="font-semibold text-primary">
+                        PDF preview unavailable in this browser.
+                      </p>
+                      <p className="mt-2 text-[13px] text-ink-muted">
+                        Open the certificate using the link above.
+                      </p>
+                    </div>
+                  </div>
+                </object>
               </div>
             </div>
           </div>
@@ -239,20 +270,27 @@ export default function AboutUsPage() {
               <div className="absolute top-0 right-0 h-64 w-64 -translate-y-1/2 translate-x-1/3 rounded-full bg-gold/10 blur-3xl" />
               <div className="relative z-10 mx-auto max-w-2xl">
                 <h2 className="font-display text-4xl font-semibold text-white md:text-6xl">
-                  Join our team of experts
+                  Connect with Dr. Sunil Kumawat
                 </h2>
                 <p className="mt-6 text-[14px] leading-7 text-primary-fixed/80 md:text-[16px]">
-                  We are always looking for visionary educational leaders, data
-                  strategists, and passionate reformers to join our global
-                  advisory.
+                  Reach out for academic guidance, professional collaboration,
+                  or leadership conversations around mathematics education.
                 </p>
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                  <button className="rounded-full bg-gold px-10 py-5 text-[11px] font-semibold tracking-tight text-ink">
-                    View Open Positions
-                  </button>
-                  <button className="rounded-full border border-white/20 bg-white/10 px-10 py-5 text-[11px] font-semibold tracking-tight text-white">
-                    Culture &amp; Impact
-                  </button>
+                  <Link
+                    href="/contact"
+                    className="rounded-full bg-gold px-10 py-5 text-[11px] font-semibold tracking-tight text-ink"
+                  >
+                    Contact Us
+                  </Link>
+                  <Link
+                    href="/images/Udyam%20Registration%20Certificate.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full border border-white/20 bg-white/10 px-10 py-5 text-[11px] font-semibold tracking-tight text-white"
+                  >
+                    View Certificate
+                  </Link>
                 </div>
               </div>
             </div>

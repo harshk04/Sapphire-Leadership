@@ -13,5 +13,4 @@ export function getSiteUrl() {
 export const siteUrl = getSiteUrl();
 
 export const defaultDescription =
-  'Sapphire Leadership & Advisory helps schools grow through strategic consulting, governance excellence, financial optimization, crisis management, and leadership development.';
-
+  'Sapphire Leadership & Advisor empowers schools, educators, and leaders through school improvement, leadership development, accreditation support, and strategic educational advisory.';

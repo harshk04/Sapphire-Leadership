@@ -5,9 +5,9 @@ import { CheckCircle2 } from 'lucide-react';
 import SectionShell from './SectionShell';
 
 const bullets = [
-  'CBSE, ICSE, and IB Affiliation Strategy',
-  'Project Feasibility & Financial Modeling',
-  'Operational Governance Frameworks',
+  'School improvement and transformation planning',
+  'Leadership development and coaching support',
+  'Accreditation and quality assurance guidance',
 ];
 
 export default function ArchitectureSection() {
@@ -16,13 +16,12 @@ export default function ArchitectureSection() {
       <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12">
         <div>
           <h2 className="[font-family:var(--font-hanken)] text-2xl font-semibold tracking-[-0.02em] text-primary md:text-[28px]">
-            Strategic Institutional Architecture
+            School Transformation & Strategic Advisory
           </h2>
           <p className="mt-4 text-[13px] leading-6 text-ink-muted md:text-[14px]">
-            Launching a new school requires more than just infrastructure; it
-            demands a synergy of regulatory compliance, academic rigor, and
-            brand positioning. Sapphire Leadership &amp; Advisory guides you
-            through every phase of the journey.
+            Building a stronger school takes more than structure; it requires
+            aligned leadership, academic clarity, and an accountable path to
+            excellence. Sapphire Leadership &amp; Advisory supports every stage.
           </p>
           <ul className="mt-7 space-y-4">
             {bullets.map((item) => (
@@ -38,8 +37,8 @@ export default function ArchitectureSection() {
           <div className="absolute -inset-6 rounded-full bg-primary-2/15 blur-3xl" />
           <div className="relative overflow-hidden rounded-lg shadow-lift">
             <Image
-              src="/images/architecture-photo.png"
-              alt="Consultants reviewing architecture blueprints."
+              src="/images/image 1.jpeg"
+              alt="School leaders reviewing improvement strategy."
               width={800}
               height={600}
               className="h-[240px] w-full object-cover md:h-[280px]"
@@ -50,4 +49,3 @@ export default function ArchitectureSection() {
     </SectionShell>
   );
 }
-

@@ -14,10 +14,10 @@ const schema = z.object({
 type FormState = z.infer<typeof schema>;
 
 const interests = [
-  'CBSE',
-  'ICSE / ISC',
-  'IB / International',
-  'State Board',
+  'School Improvement',
+  'Leadership Development',
+  'Teacher Professional Learning',
+  'Accreditation Support',
   'Undecided',
 ];
 
@@ -77,10 +77,10 @@ export default function ConsultationForm() {
   return (
     <div id="consultation" className="glass rounded-lg p-7 md:p-10">
       <h2 className="[font-family:var(--font-hanken)] text-2xl font-semibold tracking-[-0.02em] text-primary">
-        Book a Consultation
+        Request a Strategy Call
       </h2>
       <p className="mt-2 text-[13px] text-ink-muted">
-        Discuss your school project with our lead advisors.
+        Explore school improvement, leadership development, and strategic growth with our advisory team.
       </p>
 
       {submitted ? (
@@ -130,7 +130,7 @@ export default function ConsultationForm() {
               value={values.organization}
               onChange={(v) => set('organization', v)}
               onBlur={() => markTouched('organization')}
-              placeholder="Proposed/Current"
+              placeholder="School / Institution"
               error={touched.organization ? errors.organization : undefined}
             />
           </div>
@@ -169,7 +169,7 @@ export default function ConsultationForm() {
             <Label>Message</Label>
             <textarea
               className="min-h-[110px] w-full resize-none rounded-lg border border-surface-variant bg-white/60 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-primary/20"
-              placeholder="Briefly describe your vision..."
+              placeholder="Share your school goals or leadership priorities..."
               value={values.message}
               onChange={(e) => set('message', e.target.value)}
               onBlur={() => markTouched('message')}
@@ -184,7 +184,7 @@ export default function ConsultationForm() {
             type="submit"
             className="w-full rounded-lg bg-primary py-3.5 text-[13px] font-semibold text-white shadow-soft hover:shadow-lift"
           >
-            Submit Inquiry
+            Request Consultation
           </button>
         </form>
       )}
