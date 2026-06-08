@@ -6,9 +6,9 @@ import Navbar from '@/components/Navbar';
 import { Globe2, Lightbulb, ShieldCheck, Sparkles, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About Dr. Sunil Kumawat',
+  title: 'About Sapphire Leadership Advisor',
   description:
-    'Learn about Dr. Sunil Kumawat, Mathematics Educator, academic leader, researcher, and the professional voice behind Sapphire Leadership Advisor.',
+    'Learn about Sapphire Leadership Advisor, founded and managed by Dr. Sunil Kumawat, and its focus on school improvement, leadership development, and educational advisory.',
   alternates: {
     canonical: '/aboutus',
   },
@@ -32,37 +32,6 @@ const values = [
   },
 ];
 
-const leaders = [
-  {
-    role: 'MATHEMATICS EDUCATOR',
-    name: 'Dr. Sunil Kumawat',
-    desc: 'An enthusiastic Mathematics Educator at Jayshree Periwal International School, Jaipur, with a Ph.D. from Manipal University.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCVbhVNeFDGxYqMD2B0_MjUYvweoKmyMo3ETWijZM_cKGjqoPzqMWf3nQrXpwit34rGRnryrCJjRv7BpCHBJ_3-y9dX2hVCyBu1052X270j9c-vZMNuWRYpva2IjS__ii3p_euobgyBvGwbGqgUZjhoCScd0VFphwr4MkLA-YXoelccflSgiS2GIhvXuYEWH-cyF8CdWpcWKnYNnlvhNvb1_3bA0ol8nOQUY8I9OK03ZgC8BPoTuxahr7GYHn0pchRsaYxM12hUvY2T',
-  },
-  {
-    role: 'ACADEMIC PRINCIPAL',
-    name: 'Curriculum Development',
-    desc: 'At Scholars International School, he focused on curriculum development and effective teaching methods.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDUZEEuX3woTIN9KwFflgQkLiYEWkZMReIg1l8-EsNZN35C1wDkEJ-FecscuM-HOQk6T-BoXb24MV-rCp6RXHEwnj8VmqC-sGcOtGRuMJqxewSG_K3S4lNlBHLc4c0A_WTiB06fJ7hJBxKV6pE0DCPqzIgB_qKmp-kdX5M7TIZM9zhTwLNTQzEvb3_QuSUZ6KrJ7hAOPI7HVDZA3XsTKvKu3kUgkenN-lWdpk84EAheMFWe7ZB3kRQUZRekPUHUL5A5IR6Ax0krXLLy',
-  },
-  {
-    role: 'HEAD OF DEPARTMENT',
-    name: 'Student Performance',
-    desc: 'At Air Force School, he emphasized student performance analysis and continuous improvement.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuD82Zcjv4KBEpdFDpyz2PyHLO71UKUBk-EsHRYwzEiKfJJoH0gAQEeS4XXj4CFwtTMnE23ZBTenZapfhSMwlFodJmkkewLP3de3ClNuEkY5bprI_aeuumHL245ookC24EsTs-4E_oCwtEP2s3g2OcFpKrdJM5DRnstOodikXQHrMg_sfMwFEJAZik4sfRPgU0MLRNtJfYgbg21YJSDNJt1J8R0okId9iJqzZvO6TBpwc08JK6pgFCkSM399Fv3snPP8GyAqciCTZI0Q',
-  },
-  {
-    role: 'RESEARCH & INNOVATION',
-    name: 'Professional Growth',
-    desc: 'Microsoft Certified Educator, member of The Association of Mathematics Teachers of India, author, and patent holder.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAn3i8Cj45o7KpV7NT7hy9xBcLZTwIX6cXJw4TlzWD2oFuv9ZEoRhBQrSzf6AkUZHugme3ciupL17mYFVcr_nNqjg3pnWyCtKcp9uDUJp8hng_cm6cZHtk1YnTu_PI8Dqas0KTgKDJ_sSEqvDTPcQUAfL0cIdT-8dPNIdgxhril_wkBwbDMM1-xsDW0ALbO4vRXmLOsySpbuilH2pgZqPj1ZkmfpJJDg6bM6ldNjU8Fx1atjpWOZy6r3aS2-k5Mh9TT5WPouejMxyqL',
-  },
-];
-
 export default function AboutUsPage() {
   return (
     <div className="min-h-screen bg-surface text-ink">
@@ -75,24 +44,24 @@ export default function AboutUsPage() {
           </div>
           <div className="relative mx-auto max-w-container px-5 text-center md:px-10">
             <span className="inline-flex rounded-full bg-gold/20 px-4 py-1 text-[11px] font-semibold tracking-[0.14em] text-gold">
-              ABOUT DR. SUNIL KUMAWAT
+              ABOUT SAPPHIRE LEADERSHIP ADVISOR
             </span>
             <h1 className="mt-6 font-display text-4xl font-semibold leading-[1.05] tracking-[-0.03em] text-white md:text-6xl">
-              Mathematics, leadership,
+              School advisory, leadership,
               <br />
-              <span className="text-primary-fixed">and continuous learning.</span>
+              <span className="text-primary-fixed">and educational growth.</span>
             </h1>
             <p className="mx-auto mt-5 max-w-2xl text-[14px] leading-7 text-primary-fixed/80 md:text-[16px]">
-              Dr. Sunil Kumawat is a Mathematics Educator and academic leader
-              whose work combines teaching excellence, curriculum leadership,
-              research, and professional growth.
+              Sapphire Leadership Advisor supports schools, educators, and
+              leaders through strategic advisory, school improvement, teacher
+              development, and leadership growth.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link
                 href="/consultation"
                 className="rounded-full bg-gold px-6 py-3 text-[11px] font-semibold tracking-tight text-ink"
               >
-                Meet Dr. Sunil
+                Explore Advisory
               </Link>
               <Link
                 href="/images/Udyam%20Registration%20Certificate.pdf"
@@ -113,7 +82,8 @@ export default function AboutUsPage() {
                 Core values
               </h2>
               <p className="mt-3 text-[13px] leading-6 text-ink-muted md:text-[14px]">
-                The principles that guide his teaching, leadership, and research.
+                The principles that guide the way Sapphire Leadership Advisor
+                works with schools and leaders.
               </p>
             </div>
             <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -139,50 +109,61 @@ export default function AboutUsPage() {
 
         <section className="bg-surface-low py-16 md:py-24">
           <div className="mx-auto max-w-container px-5 md:px-10">
-            <div className="flex flex-col items-end justify-between gap-6 md:flex-row">
-              <div className="max-w-xl">
+            <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+              <div className="max-w-2xl">
                 <h2 className="font-display text-[26px] font-semibold tracking-[-0.02em] text-ink md:text-[34px]">
-                  Academic leadership journey
+                  Founded by Dr. Sunil Kumawat
                 </h2>
                 <p className="mt-3 text-[13px] leading-6 text-ink-muted md:text-[14px]">
-                  From mathematics instruction to principal-level leadership,
-                  Dr. Sunil&apos;s journey reflects disciplined growth and
-                  measurable improvement.
+                  Sapphire Leadership Advisor was established by Dr. Sunil
+                  Kumawat and is managed and operated by him with a strong focus
+                  on school improvement, leadership development, and academic
+                  advisory.
                 </p>
               </div>
-              <button className="rounded-full border-2 border-primary px-6 py-3 text-[11px] font-semibold tracking-tight text-primary hover:bg-primary hover:text-white">
-                View Profile Highlights
-              </button>
+              <Link
+                href="/consultation"
+                className="inline-flex w-fit items-center justify-center rounded-full border-2 border-primary px-6 py-3 text-[11px] font-semibold tracking-tight text-primary transition-colors hover:bg-primary hover:text-white"
+              >
+                Speak with Us
+              </Link>
             </div>
 
-            <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-              {leaders.map((leader) => (
-                <article key={leader.name} className="group relative overflow-hidden rounded-xl">
-                  <div className="relative aspect-[4/5] overflow-hidden rounded-xl">
-                    <Image
-                      src={leader.image}
-                      alt={leader.name}
-                      fill
-                      className="object-cover grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0"
-                      sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
-                    />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy/35 to-transparent" />
-                </div>
-                <div className="absolute inset-x-0 bottom-0 p-6">
-                    <div className="glass translate-y-4 rounded-xl p-5 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                      <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-gold">
-                        {leader.role}
-                      </p>
-                      <h3 className="font-display text-xl font-semibold text-ink">
-                        {leader.name}
-                      </h3>
-                      <p className="mt-2 text-[13px] leading-6 text-ink-muted">
-                        {leader.desc}
-                      </p>
-                    </div>
-                  </div>
+            <div className="mt-10 grid gap-8 lg:grid-cols-[0.98fr_1.02fr] lg:items-center">
+              <div className="relative overflow-hidden rounded-[28px] border border-surface-variant bg-white shadow-sm">
+                <Image
+                  src="/images/sunil.png"
+                  alt="Dr. Sunil Kumawat"
+                  width={900}
+                  height={1100}
+                  className="h-[420px] w-full object-cover md:h-[560px]"
+                  priority
+                />
+              </div>
+
+              <div className="grid gap-5">
+                <article className="rounded-[24px] border border-surface-variant/50 bg-white p-7 shadow-sm md:p-8">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-gold">
+                    Founder & Operator
+                  </p>
+                  <h3 className="mt-3 font-display text-2xl font-semibold text-ink md:text-3xl">
+                    Dr. Sunil Kumawat
+                  </h3>
+                  <p className="mt-4 text-[13px] leading-6 text-ink-muted md:text-[14px]">
+                    Dr. Sunil Kumawat established Sapphire Leadership Advisor
+                    and continues to manage its advisory practice. His work
+                    combines academic leadership, mathematics education,
+                    research, and professional growth.
+                  </p>
+                  <p className="mt-4 text-[13px] leading-6 text-ink-muted md:text-[14px]">
+                    His background includes experience as a Mathematics
+                    Educator, Academic Principal, and Head of Department, with a
+                    consistent focus on curriculum development, performance
+                    analysis, and school improvement.
+                  </p>
                 </article>
-              ))}
+
+              </div>
             </div>
           </div>
         </section>
@@ -190,12 +171,12 @@ export default function AboutUsPage() {
         <section className="py-16 md:py-24">
           <div className="mx-auto grid max-w-container gap-12 px-5 md:grid-cols-[0.95fr_1.05fr] md:px-10">
             <div>
-              <h2 className="font-display text-[26px] font-semibold tracking-[-0.02em] text-ink md:text-[34px]">
+                <h2 className="font-display text-[26px] font-semibold tracking-[-0.02em] text-ink md:text-[34px]">
                 Professional credentials
-              </h2>
+                </h2>
               <p className="mt-3 max-w-lg text-[13px] leading-6 text-ink-muted md:text-[14px]">
                 A glance at the affiliations, publications, and recognitions
-                behind his academic practice.
+                that support the advisory practice.
               </p>
               <div className="mt-8 space-y-4">
                 {[
@@ -273,8 +254,8 @@ export default function AboutUsPage() {
                   Connect with Dr. Sunil Kumawat
                 </h2>
                 <p className="mt-6 text-[14px] leading-7 text-primary-fixed/80 md:text-[16px]">
-                  Reach out for academic guidance, professional collaboration,
-                  or leadership conversations around mathematics education.
+                  Reach out for school advisory, leadership collaboration, and
+                  strategic conversations around educational growth.
                 </p>
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
                   <Link

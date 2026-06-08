@@ -17,10 +17,8 @@ const items = [
     icon: BarChart3,
     title: 'School Transformation',
     description:
-      'Turning school goals into a measurable improvement plan that raises standards, sharpens systems, and builds confidence.',
+      'Turning school goals into a practical improvement plan that raises standards, strengthens school routines, and builds shared confidence across the leadership team. We help translate priorities into clear actions, align academic and operational systems, and support steady progress that people can see and sustain.',
     variant: 'featured',
-    metric: '92%',
-    metricLabel: 'Improvement Milestones Met',
   },
   {
     icon: LayoutGrid,
@@ -40,7 +38,7 @@ const items = [
     icon: BarChart3,
     title: 'Strategic Advisory',
     description:
-      'Providing board-level insight on governance, academic direction, and long-term educational growth.',
+      'Providing board-level insight on governance, academic direction, and long-term educational growth. We help leadership teams make grounded decisions, align priorities across departments, and build a clear path for sustainable improvement that supports both current performance and future ambition.',
     variant: 'card',
   },
 ];
@@ -52,7 +50,7 @@ export default function WhySapphire() {
     <SectionShell className="bg-surface-low" id="why">
       <div className="text-center">
         <h2 className="[font-family:var(--font-hanken)] text-[26px] font-semibold tracking-[-0.02em] text-primary md:text-[30px]">
-          Why Sapphire
+          Why Choose Us
         </h2>
         <p className="mt-3 text-[12px] text-ink-muted">
           Trusted advisory for schools, educators, and leaders committed to lasting growth.
@@ -62,7 +60,11 @@ export default function WhySapphire() {
       <div className="mt-10 grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-1">
           {items
-            .filter((item) => item.variant === 'card' || item.variant === 'wide')
+            .filter(
+              (item) =>
+                (item.variant === 'card' || item.variant === 'wide') &&
+                item.title !== 'Strategic Advisory'
+            )
             .map((item, idx) => (
               <FeatureCard key={item.title} item={item} idx={idx} reduce={reduce} />
             ))}
@@ -130,32 +132,25 @@ function FeatureCard({
         />
         <h3
           className={cn(
-            'mt-4 [font-family:var(--font-hanken)] text-lg font-semibold',
-            isFeatured ? 'text-white' : 'text-primary'
+            'mt-4 [font-family:var(--font-hanken)] font-semibold',
+            isFeatured
+              ? 'text-2xl text-white md:text-3xl'
+              : 'text-xl text-primary md:text-2xl'
           )}
         >
           {item.title}
         </h3>
         <p
           className={cn(
-            'mt-3 text-[13px] leading-6',
-            isFeatured ? 'text-white/80' : 'text-ink-muted'
+            'mt-3 text-[14px] leading-7 text-justify md:text-[15px] md:leading-8',
+            isFeatured ? 'text-white/85' : 'text-ink-muted'
           )}
         >
           {item.description}
         </p>
       </div>
 
-      {isFeatured && item.metric ? (
-        <div className="mt-8 border-t border-white/15 pt-7">
-          <div className="text-3xl font-bold">{item.metric}</div>
-          <div className="mt-1 text-[10px] uppercase tracking-[0.18em] text-white/60">
-            {item.metricLabel}
-          </div>
-        </div>
-      ) : null}
-
-      {isWide ? (
+      {isWide && item.title !== 'International Standards' ? (
         <div className="mt-6 flex h-14 w-14 items-center justify-center rounded-full bg-surface-low text-primary md:mt-0">
           <Globe2 className="h-6 w-6" />
         </div>

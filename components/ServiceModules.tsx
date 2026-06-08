@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import SectionShell from './SectionShell';
 import { ArrowRight } from 'lucide-react';
 import { motion, useReducedMotion } from 'framer-motion';
@@ -12,6 +13,8 @@ const modules = [
       'Coaching for senior leaders focused on vision, decision-making, team alignment, and sustained school-wide improvement.',
     image: '/images/leadershipdevelopment.jpeg',
     accent: 'Leadership',
+    href: '/consultation',
+    cta: 'Book Consultation',
   },
   {
     title: 'School Improvement',
@@ -19,6 +22,8 @@ const modules = [
       'Practical advisory to strengthen academic systems, quality assurance, and the routines that shape school excellence.',
     image: '/images/schoolconsultancy.jpeg',
     accent: 'Quality',
+    href: '/schools',
+    cta: 'Explore Schools',
   },
   {
     title: 'Teacher Professional Learning',
@@ -26,6 +31,8 @@ const modules = [
       'Professional learning journeys that build classroom confidence, instructional skill, and a stronger culture of collaboration.',
     image: '/images/teacherpl.jpeg',
     accent: 'Learning',
+    href: '/teacherspage',
+    cta: 'Explore Teachers',
   },
   {
     title: 'Student Success & Future Readiness',
@@ -33,6 +40,8 @@ const modules = [
       'Programs that connect academic purpose with future readiness, helping students grow with clarity, confidence, and direction.',
     image: '/images/studentsuccess.jpeg',
     accent: 'Future',
+    href: '/studentpage',
+    cta: 'Explore Students',
   },
 ];
 
@@ -42,7 +51,7 @@ export default function ServiceModules() {
   return (
     <SectionShell className="bg-surface" id="services">
       <h2 className="text-center [font-family:var(--font-hanken)] text-[26px] font-semibold tracking-[-0.02em] text-primary md:text-[30px]">
-        Service Modules
+        Our Services
       </h2>
 
       <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -76,12 +85,12 @@ export default function ServiceModules() {
               <p className="mt-3 text-[13px] leading-6 text-ink-muted">
                 {m.description}
               </p>
-              <a
-                href="#consultation"
+              <Link
+                href={m.href}
                 className="mt-5 inline-flex items-center gap-2 text-[13px] font-semibold text-primary transition-all group-hover:gap-3"
               >
-                Learn more about this module <ArrowRight className="h-4 w-4" />
-              </a>
+                {m.cta} <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
           </motion.div>
         ))}

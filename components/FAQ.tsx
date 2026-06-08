@@ -5,24 +5,24 @@ import { useId, useState } from 'react';
 
 const faqs = [
   {
-    q: 'How do you support school improvement?',
-    a: 'We begin with a focused review of priorities, systems, and outcomes, then shape an improvement path that is practical and measurable.',
+    q: 'How do you approach school improvement?',
+    a: 'We start with a structured review of leadership, academics, and school routines, then shape a practical plan with clear priorities, measurable actions, and regular follow-up.',
   },
   {
-    q: 'Do you offer leadership coaching?',
-    a: 'Yes. We coach principals, coordinators, and aspiring leaders through planning, team alignment, and stronger decision-making.',
+    q: 'Do you coach school leaders directly?',
+    a: 'Yes. We work with principals, vice principals, coordinators, and aspiring leaders to strengthen decision-making, communication, team alignment, and day-to-day leadership practice.',
   },
   {
-    q: 'Can you support accreditation work?',
-    a: 'Absolutely. We help schools prepare evidence, strengthen internal systems, and align daily practice with quality standards.',
+    q: 'Can you help with accreditation and quality reviews?',
+    a: 'Absolutely. We help schools prepare evidence, tighten internal systems, and align everyday practice with the standards expected during accreditation or quality audits.',
   },
   {
-    q: 'Do you work with teacher development programs?',
-    a: 'Yes. Our learning pathways build teaching confidence, instructional consistency, and a stronger culture of professional growth.',
+    q: 'What do your teacher development programs focus on?',
+    a: 'Our learning pathways focus on lesson design, classroom leadership, assessment, student engagement, and reflection so teachers build confidence and consistency in practice.',
   },
   {
-    q: 'Can you work with international schools?',
-    a: 'We can. Our advisory supports international schools with leadership planning, quality assurance, and academic alignment.',
+    q: 'Do you work with international schools and boards?',
+    a: 'We do. Our advisory supports international schools with academic alignment, governance support, leadership planning, and quality assurance that fits the institution’s context.',
   },
 ];
 

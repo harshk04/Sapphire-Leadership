@@ -74,7 +74,7 @@ export default function ContactPage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(197,160,89,0.2),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.12),transparent_35%)]" />
           <div className="relative mx-auto max-w-container px-5 text-center md:px-10">
             <span className="inline-flex rounded-full bg-gold px-4 py-1 text-[11px] font-semibold tracking-[0.14em] text-ink">
-              JAIPUR HEAD OFFICE
+              CONNECT WITH US
             </span>
             <h1 className="mx-auto mt-6 max-w-3xl font-display text-4xl font-semibold leading-[1.05] tracking-[-0.03em] text-white md:text-6xl">
               Connect with Sapphire Leadership Advisor.
@@ -137,8 +137,8 @@ export default function ContactPage() {
         </section>
 
         <section className="py-16 md:py-24">
-          <div className="mx-auto grid max-w-container gap-8 px-5 md:grid-cols-[0.95fr_1.05fr] md:px-10">
-            <div className="glass rounded-2xl p-8 md:p-10">
+          <div className="mx-auto grid max-w-container gap-8 px-5 md:grid-cols-[1.25fr_0.75fr] md:px-10">
+            <div className="glass rounded-2xl p-9 md:p-12">
               <span className="inline-flex rounded-full bg-gold/15 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-gold">
                 Send an inquiry
               </span>
@@ -159,13 +159,13 @@ export default function ContactPage() {
                     Message
                   </label>
                   <textarea
-                    className="min-h-[120px] w-full rounded-xl border border-surface-variant bg-white/70 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-primary/20"
+                    className="min-h-[120px] w-full rounded-md border border-surface-variant bg-white/70 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-primary/20"
                     placeholder="How can our advisory team assist you?"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary py-3.5 text-[13px] font-semibold text-white hover:bg-primary-2"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary py-3.5 text-[13px] font-semibold text-white hover:bg-primary-2"
                 >
                   Confirm Inquiry
                   <Send size={16} />
@@ -179,7 +179,7 @@ export default function ContactPage() {
                 alt="Stylized world map"
                 fill
                 className="object-cover"
-                sizes="(min-width: 1024px) 50vw, 100vw"
+                sizes="(min-width: 1024px) 35vw, 100vw"
               />
               <div className="absolute inset-0 bg-navy/65" />
               <div className="relative z-10 flex h-full min-h-[520px] flex-col justify-end p-8 text-white md:p-10">
@@ -279,7 +279,7 @@ function Input({
       <input
         type={type}
         placeholder={placeholder}
-        className="w-full rounded-full border border-surface-variant bg-white/70 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-primary/20"
+        className="w-full rounded-md border border-surface-variant bg-white/70 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-primary/20"
       />
     </div>
   );

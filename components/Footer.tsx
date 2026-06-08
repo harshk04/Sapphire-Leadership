@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 const siteSections = [
   {
@@ -20,22 +21,13 @@ const siteSections = [
       { label: 'Resources', href: '/resourcespage' },
     ],
   },
-  {
-    title: 'Resource Hub',
-    links: [
-      { label: 'Insights', href: '/resourcespage' },
-      { label: 'Teacher Pathways', href: '/teacherspage' },
-      { label: 'Student Programs', href: '/studentpage' },
-      { label: 'School Advisory', href: '/schools' },
-    ],
-  },
 ];
 
 export default function Footer() {
   return (
     <footer className="border-t border-surface-variant bg-white">
-      <div className="mx-auto grid max-w-container gap-10 px-5 py-12 md:px-10 lg:grid-cols-12">
-        <div className="lg:col-span-3">
+      <div className="mx-auto grid max-w-container gap-8 px-5 py-12 md:px-10 lg:grid-cols-[minmax(240px,1.1fr)_minmax(0,0.72fr)_minmax(0,0.72fr)_minmax(320px,1.25fr)] lg:gap-10">
+        <div>
           <Link href="/" className="inline-flex" aria-label="Sapphire Leadership & Advisory">
             <span className="block md:hidden">
               <Image
@@ -56,16 +48,33 @@ export default function Footer() {
               />
             </span>
           </Link>
-          <p className="mt-3 text-[13px] leading-6 text-ink-muted">
+          <p className="mt-3 max-w-[260px] text-[13px] leading-6 text-ink-muted">
             Empowering leaders and transforming education through strategic
             advisory, school improvement, and professional learning.
           </p>
         </div>
 
-        <div className="grid gap-10 sm:grid-cols-2 lg:col-span-9 lg:grid-cols-3">
-          {siteSections.map((section) => (
-            <FooterCol key={section.title} title={section.title} links={section.links} />
-          ))}
+        <FooterCol key={siteSections[0].title} title={siteSections[0].title} links={siteSections[0].links} />
+        <FooterCol key={siteSections[1].title} title={siteSections[1].title} links={siteSections[1].links} />
+
+        <div className="space-y-3 rounded-[20px] border border-surface-variant/45 bg-surface-low p-5">
+          <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-primary whitespace-nowrap">
+            Curated Intelligence for Leaders
+          </div>
+          <p className="text-[12px] leading-6 text-ink-muted">
+            A concise monthly brief for executives and board members on the
+            intersection of technology, finance, and pedagogy.
+          </p>
+          <div className="flex items-center gap-2 rounded-full border border-surface-variant bg-white p-2">
+            <input
+              placeholder="professional@institution.edu"
+              className="h-11 min-w-0 flex-1 rounded-full border border-surface-variant bg-white px-4 text-[13px] text-slate-900 placeholder:text-slate-400 outline-none"
+            />
+            <button className="inline-flex h-11 shrink-0 items-center justify-center rounded-full bg-[#d5a94d] px-4 text-[12px] font-semibold text-[#0c2f68] transition-colors hover:bg-[#e0b85c]">
+              Subscribe
+              <ArrowRight size={15} className="ml-2" />
+            </button>
+          </div>
         </div>
       </div>
 

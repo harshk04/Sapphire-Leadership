@@ -177,7 +177,7 @@ export default function TeachersPage() {
           <div className="mx-auto max-w-container px-5 md:px-10">
             <div className="text-center">
               <h2 className="font-display text-[26px] font-semibold tracking-[-0.02em] text-primary md:text-[34px]">
-                Service modules
+                Our Services
               </h2>
               <p className="mx-auto mt-3 max-w-2xl text-[13px] leading-6 text-ink-muted md:text-[14px]">
                 Tailored support for teachers, coordinators, and school leaders.

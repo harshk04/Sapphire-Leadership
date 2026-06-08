@@ -98,7 +98,6 @@ export default function ResourcesPage() {
                   Articles and insights from across the Sapphire network.
                 </p>
               </div>
-              <LinkPill href="/contact" label="Request more resources" />
             </div>
 
             <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -161,41 +160,6 @@ export default function ResourcesPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24">
-          <div className="mx-auto max-w-container px-5 md:px-10">
-            <div className="rounded-[40px] bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.08),transparent_34%),linear-gradient(135deg,#0b3b84,#08397f_55%,#0a4a9a)] px-6 py-16 text-center text-white shadow-[0_26px_70px_rgba(9,38,88,0.18)] md:px-10 md:py-24">
-              <div className="mx-auto max-w-4xl">
-                <h2 className="font-display text-[32px] font-semibold tracking-[-0.03em] text-white md:text-[44px]">
-                  Curated Intelligence for Leaders
-                </h2>
-                <p className="mx-auto mt-5 max-w-3xl text-[15px] leading-7 text-white/82 md:text-[18px]">
-                  Join 4,000+ executives and board members who receive our
-                  monthly brief on the intersection of technology, finance, and
-                  pedagogy.
-                </p>
-
-                <div className="mx-auto mt-10 flex max-w-2xl flex-col gap-3 rounded-full bg-white/70 p-2 shadow-[0_12px_28px_rgba(8,28,66,0.16)] backdrop-blur-sm md:flex-row md:items-center">
-                  <input
-                    placeholder="professional@institution.edu"
-                    className="h-14 flex-1 rounded-full border-0 bg-transparent px-6 text-[14px] font-medium text-slate-900 placeholder:text-slate-400 outline-none"
-                  />
-                  <button className="inline-flex h-14 items-center justify-center rounded-full bg-[#d5a94d] px-8 text-[14px] font-semibold text-[#0c2f68] transition-colors hover:bg-[#e0b85c] md:min-w-[170px]">
-                    Subscribe
-                    <ArrowRight size={16} className="ml-2" />
-                  </button>
-                </div>
-
-                <p className="mt-6 text-[13px] text-white/60">
-                  We respect your privacy. Unsubscribe at any time.
-                </p>
-
-                <div className="mt-8 flex justify-center">
-                  <LinkPill href="/aboutus" label="About Sapphire Leadership" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />

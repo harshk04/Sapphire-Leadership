@@ -41,7 +41,7 @@ export default function ConsultationPage() {
             <h1 className="mx-auto mt-6 max-w-3xl font-display text-4xl font-semibold leading-[1.05] tracking-[-0.03em] text-white md:text-6xl">
               Schedule your strategic consultation.
             </h1>
-            <p className="mx-auto mt-5 max-w-2xl text-[14px] leading-7 text-white/82 md:text-[16px]">
+            <p className="mx-auto mt-5 max-w-2xl text-[14px] leading-7 text-white md:text-[16px]">
               Partner with institutional experts to reshape your educational
               vision through precise, high-impact advisory.
             </p>

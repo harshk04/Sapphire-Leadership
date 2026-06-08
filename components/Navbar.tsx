@@ -73,6 +73,9 @@ export default function Navbar() {
     '/contact',
     '/consultation',
     '/schools',
+    '/privacy-policy',
+    '/terms-of-service',
+    '/cookie-policy',
   ]);
   const whiteHeroHeader = !scrolled && heroHeaderPages.has(pathname);
 
