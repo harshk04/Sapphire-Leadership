@@ -1,7 +1,7 @@
 'use client';
 
 import { z } from 'zod';
-import { useMemo, useState } from 'react';
+import { useMemo, useState, type FormEvent } from 'react';
 
 const schema = z.object({
   name: z.string().min(2, 'Please enter your name.'),
@@ -37,6 +37,8 @@ export default function ConsultationForm() {
     message: false,
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const errors = useMemo(() => {
     const parsed = schema.safeParse(values);
@@ -58,7 +60,7 @@ export default function ConsultationForm() {
     setTouched((t) => ({ ...t, [key]: true }));
   }
 
-  function onSubmit(e: React.FormEvent) {
+  async function onSubmit(e: FormEvent) {
     e.preventDefault();
     const parsed = schema.safeParse(values);
     if (!parsed.success) {
@@ -71,7 +73,44 @@ export default function ConsultationForm() {
       });
       return;
     }
-    setSubmitted(true);
+
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      const response = await fetch('/api/form-submissions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          formName: 'Consultation Request',
+          sourcePage: '/consultation',
+          subject: `${values.name} - Consultation request`,
+          fields: {
+            Name: values.name,
+            Email: values.email,
+            Organization: values.organization,
+            'Service Interest': values.serviceInterest,
+            Message: values.message,
+          },
+        }),
+      });
+
+      const result = (await response.json()) as
+        | { ok: true }
+        | { ok: false; error?: string };
+
+      if (!response.ok || !result.ok) {
+        throw new Error(result.ok ? 'Unable to submit your request.' : result.error || 'Unable to submit your request.');
+      }
+
+      setSubmitted(true);
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : 'Unable to submit your request.');
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -182,10 +221,12 @@ export default function ConsultationForm() {
 
           <button
             type="submit"
-            className="w-full rounded-lg bg-primary py-3.5 text-[13px] font-semibold text-white shadow-soft hover:shadow-lift"
+            disabled={isSubmitting}
+            className="w-full rounded-lg bg-primary py-3.5 text-[13px] font-semibold text-white shadow-soft hover:shadow-lift disabled:cursor-not-allowed disabled:opacity-70"
           >
-            Request Consultation
+            {isSubmitting ? 'Sending...' : 'Request Consultation'}
           </button>
+          {submitError ? <ErrorText>{submitError}</ErrorText> : null}
         </form>
       )}
     </div>

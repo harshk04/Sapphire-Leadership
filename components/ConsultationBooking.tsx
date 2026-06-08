@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useState, type FormEvent } from 'react';
 import { CalendarDays, Check, ChevronLeft, ChevronRight, Globe2, School2, Sparkles, Video } from 'lucide-react';
 
 const services = [
@@ -40,6 +40,8 @@ export default function ConsultationBooking() {
   const [day, setDay] = useState('7');
   const [platform, setPlatform] = useState(platforms[0]!);
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const summaryDate = useMemo(() => `October ${day}, 2024`, [day]);
 
@@ -193,33 +195,95 @@ export default function ConsultationBooking() {
           </h2>
           <form
             className="glass mt-6 space-y-6 rounded-xl p-6 md:p-8"
-            onSubmit={(e) => {
+            onSubmit={async (e: FormEvent<HTMLFormElement>) => {
               e.preventDefault();
-              setSubmitted(true);
+              setIsSubmitting(true);
+              setSubmitError('');
+
+              const formData = new FormData(e.currentTarget);
+              const overview = String(formData.get('overview') || '');
+              const fullName = String(formData.get('fullName') || '');
+              const organization = String(formData.get('organization') || '');
+              const designation = String(formData.get('designation') || '');
+              const termsAccepted = formData.get('terms') === 'on';
+
+              try {
+                const response = await fetch('/api/form-submissions', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({
+                    formName: 'Consultation Booking',
+                    sourcePage: '/consultation',
+                    subject: `${service.title} booking - ${fullName || 'New booking'}`,
+                    fields: {
+                      'Full Name': fullName,
+                      Organization: organization,
+                      Designation: designation,
+                      Service: service.title,
+                      Duration: service.duration,
+                      Date: summaryDate,
+                      Platform: platform,
+                      'Overview of Consultation Needs': overview,
+                      'Terms Accepted': termsAccepted,
+                    },
+                  }),
+                });
+
+                const result = (await response.json()) as
+                  | { ok: true }
+                  | { ok: false; error?: string };
+
+                if (!response.ok || !result.ok) {
+                  throw new Error(
+                    result.ok ? 'Unable to confirm your booking.' : result.error || 'Unable to confirm your booking.',
+                  );
+                }
+
+                setSubmitted(true);
+              } catch (error) {
+                setSubmitError(error instanceof Error ? error.message : 'Unable to confirm your booking.');
+              } finally {
+                setIsSubmitting(false);
+              }
             }}
           >
             <div className="grid gap-4 md:grid-cols-2">
-              <Field label="Full Name" placeholder="Dr. Sarah Johnson" />
-              <Field label="Organization" placeholder="Global Academy" />
+              <Field name="fullName" label="Full Name" placeholder="Dr. Sarah Johnson" required />
+              <Field name="organization" label="Organization" placeholder="Global Academy" required />
             </div>
-            <Field label="Designation" placeholder="Head of Institutional Strategy" />
+            <Field name="designation" label="Designation" placeholder="Head of Institutional Strategy" required />
             <div className="space-y-2">
               <Label>Brief Overview of Consultation Needs</Label>
-              <textarea className="w-full rounded-xl border border-surface-variant bg-white/70 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-primary/20" rows={4} placeholder="Briefly describe your institutional goals or current challenges..." />
+              <textarea
+                name="overview"
+                className="w-full rounded-xl border border-surface-variant bg-white/70 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-primary/20"
+                rows={4}
+                placeholder="Briefly describe your institutional goals or current challenges..."
+                required
+              />
             </div>
             <div className="flex items-center gap-3">
-              <input type="checkbox" id="terms" className="rounded text-primary focus:ring-primary" />
+              <input
+                name="terms"
+                type="checkbox"
+                id="terms"
+                className="rounded text-primary focus:ring-primary"
+                required
+              />
               <label htmlFor="terms" className="text-[13px] text-ink-muted">
                 I agree to the privacy policy and terms of advisory engagement.
               </label>
             </div>
+            {submitError ? <div className="text-[13px] text-red-600">{submitError}</div> : null}
             <div className="flex justify-between">
               <button onClick={() => setStep(3)} type="button" className="inline-flex items-center gap-2 rounded-full border border-primary px-6 py-3 text-[11px] font-semibold text-primary">
                 <ChevronLeft size={14} />
                 Back
               </button>
-              <button type="submit" className="rounded-full bg-primary px-8 py-4 text-[13px] font-semibold text-white shadow-soft">
-                Confirm Booking
+              <button type="submit" disabled={isSubmitting} className="rounded-full bg-primary px-8 py-4 text-[13px] font-semibold text-white shadow-soft disabled:cursor-not-allowed disabled:opacity-70">
+                {isSubmitting ? 'Sending...' : 'Confirm Booking'}
               </button>
             </div>
           </form>
@@ -278,11 +342,17 @@ export default function ConsultationBooking() {
   );
 }
 
-function Field({ label, placeholder }: { label: string; placeholder: string }) {
+function Field({ label, placeholder, name, required }: { label: string; placeholder: string; name: string; required?: boolean }) {
   return (
     <div className="space-y-2">
       <Label>{label}</Label>
-      <input className="w-full rounded-full border border-surface-variant bg-white/70 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-primary/20" placeholder={placeholder} type="text" />
+      <input
+        name={name}
+        required={required}
+        className="w-full rounded-full border border-surface-variant bg-white/70 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-primary/20"
+        placeholder={placeholder}
+        type="text"
+      />
     </div>
   );
 }

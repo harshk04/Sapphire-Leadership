@@ -20,9 +20,9 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
-  title: 'For Schools: School Improvement & Advisory',
+  title: 'For Schools: Strategic Leadership & School Advisory',
   description:
-    'Explore Sapphire Leadership & Advisor’s support for school improvement, accreditation, strategic planning, governance, and academic excellence.',
+    'Explore Sapphire Leadership & Advisor’s support for school improvement planning, leadership development, accreditation, governance, and academic excellence.',
   alternates: {
     canonical: '/schools',
   },
@@ -31,27 +31,27 @@ export const metadata: Metadata = {
 const audienceCards = [
   {
     icon: Building2,
-    title: 'School Founders & Boards',
+    title: 'School Founders & Directors',
     description:
-      'Clarity on governance, institutional direction, and the decisions that shape sustainable school growth.',
+      'Strategic guidance for governance, long-term planning, institutional growth, and leadership accountability.',
   },
   {
     icon: Users,
     title: 'Principals & Leadership Teams',
     description:
-      'Practical support for leadership alignment, school routines, and the daily execution that drives improvement.',
+      'Support for strengthening culture, execution, decision-making, and school improvement initiatives.',
   },
   {
     icon: ShieldCheck,
-    title: 'Accreditation Teams',
+    title: 'Accreditation & Quality Teams',
     description:
-      'Structured guidance to strengthen quality assurance, documentation, and readiness for formal review.',
+      'Structured support for evidence collection, compliance, documentation, and continuous improvement processes.',
   },
   {
     icon: GraduationCap,
     title: 'Academic Leaders',
     description:
-      'Sharper academic systems, stronger classroom consistency, and a better link between goals and outcomes.',
+      'Strengthen curriculum implementation, instructional consistency, assessment systems, and learning outcomes.',
   },
 ];
 
@@ -60,31 +60,31 @@ const pillarCards = [
     icon: Compass,
     title: 'School Improvement Planning',
     description:
-      'Turn broad priorities into a focused improvement agenda with clear actions, ownership, and review cycles.',
+      'Convert strategic goals into practical action plans with ownership, timelines, monitoring, and accountability.',
   },
   {
     icon: ChartColumnBig,
     title: 'Leadership Development',
     description:
-      'Develop senior leaders who can communicate direction, build accountability, and guide academic progress with confidence.',
+      'Develop confident leaders who can guide teams, drive improvement, and sustain institutional growth.',
   },
   {
     icon: BadgeCheck,
-    title: 'Accreditation & QA',
+    title: 'Accreditation & Quality Assurance',
     description:
-      'Build stronger evidence, cleaner systems, and a more confident approach to standards and external quality checks.',
+      'Build stronger evidence systems and greater readiness for accreditation, inspection, and review processes.',
   },
   {
     icon: ClipboardList,
-    title: 'Governance & Strategy',
+    title: 'Governance & Strategic Direction',
     description:
-      'Support for founders and boards who want clearer oversight, better decisions, and a more stable institutional framework.',
+      'Support founders and boards in creating clarity, oversight, and stronger decision-making structures.',
   },
   {
     icon: BookOpenText,
     title: 'Academic Excellence',
     description:
-      'Strengthen teaching quality, assessment routines, and the academic culture that supports sustained student success.',
+      'Strengthen teaching quality, assessment systems, and the academic culture that drives student success.',
   },
 ];
 
@@ -93,48 +93,48 @@ const steps = [
     number: '01',
     title: 'Review',
     description:
-      'We begin with a structured review of school priorities, leadership realities, and the systems already in place.',
+      'Evaluate priorities, leadership structures, systems, and current institutional performance.',
   },
   {
     number: '02',
     title: 'Prioritise',
     description:
-      'We identify the most important gaps first so effort, time, and resources stay focused on meaningful change.',
+      'Identify the highest-impact opportunities and establish practical improvement priorities.',
   },
   {
     number: '03',
     title: 'Align',
     description:
-      'We connect leadership, academic, and operational teams around the same direction and the same outcomes.',
+      'Create alignment between governance, leadership teams, academic goals, and operational systems.',
   },
   {
     number: '04',
     title: 'Sustain',
     description:
-      'We help embed routines and accountability so progress continues beyond the initial engagement.',
+      'Embed routines, monitoring structures, and accountability mechanisms that support long-term success.',
   },
 ];
 
 const faqItems = [
   {
-    question: 'How does Sapphire support a school improvement journey?',
+    question: 'How does Sapphire support school improvement?',
     answer:
-      'We start with an honest review of priorities, then build a practical plan around leadership, academics, systems, and quality assurance. The goal is not just planning, but steady implementation that the school can sustain.',
+      'We help schools clarify priorities, strengthen leadership systems, develop improvement plans, and build accountability structures that support long-term growth.',
   },
   {
     question: 'Can you work with boards, founders, and principals together?',
     answer:
-      'Yes. Many engagements work best when governance and school leadership are aligned. We help each group understand its role so decisions are clearer and execution is more consistent.',
+      'Yes. Our advisory approach supports alignment across governance, leadership, and academic teams to ensure consistent direction and execution.',
   },
   {
-    question: 'Do you help with accreditation and quality reviews?',
+    question: 'Do you provide accreditation support?',
     answer:
-      'We do. Our support includes readiness checks, documentation guidance, evidence planning, and review preparation so schools can approach standards with greater confidence.',
+      'Yes. We assist schools with readiness reviews, evidence systems, documentation processes, quality assurance frameworks, and accreditation preparation.',
   },
   {
-    question: 'Is your support suitable for international schools?',
+    question: 'Do you work with international and IB schools?',
     answer:
-      'Yes. We work with schools that want stronger systems, a sharper academic direction, and a quality framework that reflects international expectations and local context.',
+      'Yes. We support both national and international schools, including institutions pursuing global standards and accreditation pathways.',
   },
 ];
 
@@ -151,13 +151,13 @@ export default function SchoolsPage() {
                 FOR SCHOOLS
               </span>
               <h1 className="mt-6 max-w-xl font-display text-4xl font-semibold leading-[1.03] tracking-[-0.04em] md:text-6xl">
-                Build a stronger school with strategic advisory.
+                Build stronger schools through strategic leadership.
               </h1>
               <p className="mt-5 max-w-2xl text-[14px] leading-7 text-white/84 md:text-[16px]">
                 Sapphire Leadership &amp; Advisor partners with school founders,
-                boards, principals, and academic leaders to strengthen
-                governance, sharpen school improvement, and create a more
-                accountable path to excellence.
+                boards, principals, and leadership teams to strengthen
+                governance, improve systems, and create sustainable pathways to
+                academic excellence.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
@@ -171,15 +171,15 @@ export default function SchoolsPage() {
                   href="#school-pillars"
                   className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-[11px] font-semibold tracking-wide text-white backdrop-blur-sm transition-colors hover:bg-white/15"
                 >
-                  Explore Advisory Areas
+                  Explore Advisory Services
                 </Link>
               </div>
 
               <div className="mt-9 grid gap-3 sm:grid-cols-3">
                 {[
-                  'School improvement plans with clear ownership',
-                  'Leadership coaching rooted in accountability',
-                  'Accreditation readiness and quality assurance',
+                  'School improvement plans with clear priorities and measurable outcomes',
+                  'Leadership development grounded in accountability and execution',
+                  'Accreditation readiness and quality assurance support',
                 ].map((item) => (
                   <div
                     key={item}
@@ -212,16 +212,16 @@ export default function SchoolsPage() {
                     </div>
                     <div className="mt-2 text-[13px] leading-6 text-white/80">
                       Strategic planning, leadership development, accreditation,
-                      and academic improvement.
+                      governance, and school improvement.
                     </div>
                   </div>
                   <div className="rounded-[18px] bg-white p-4 text-ink shadow-sm">
                     <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-primary">
-                      What changes
+                      What improves
                     </div>
                     <div className="mt-2 text-[13px] leading-6 text-ink-muted">
-                      Clearer priorities, stronger routines, better evidence,
-                      and visible progress.
+                      Clearer priorities, stronger systems, aligned teams, and
+                      measurable institutional progress.
                     </div>
                   </div>
                 </div>
@@ -234,12 +234,12 @@ export default function SchoolsPage() {
           <div className="mx-auto max-w-container px-5 md:px-10">
             <div className="max-w-2xl">
               <h2 className="[font-family:var(--font-hanken)] text-3xl font-semibold tracking-[-0.03em] text-primary md:text-4xl">
-                Who we support
+                Who We Support
               </h2>
               <p className="mt-3 text-[13px] leading-6 text-ink-muted md:text-[14px]">
-                Our school advisory work is designed for decision-makers who
-                need practical direction, clearer alignment, and a stronger
-                institutional framework.
+                Our advisory services are designed for decision-makers who want
+                stronger systems, clearer direction, and sustainable school
+                growth.
               </p>
             </div>
 
@@ -278,13 +278,13 @@ export default function SchoolsPage() {
                   SCHOOL ADVISORY PILLARS
                 </span>
                 <h2 className="mt-5 [font-family:var(--font-hanken)] text-3xl font-semibold tracking-[-0.03em] text-primary md:text-4xl">
-                  Advisory built around improvement, not just advice
+                  Focused on improvement, not just recommendations.
                 </h2>
               </div>
               <p className="max-w-xl text-[13px] leading-6 text-ink-muted md:text-[14px]">
-                Each engagement is shaped to help schools clarify priorities,
-                improve systems, and create the conditions for stronger
-                teaching, leadership, and student outcomes.
+                Every engagement is designed to help schools strengthen
+                systems, develop leadership capacity, and improve institutional
+                effectiveness.
               </p>
             </div>
 
@@ -322,10 +322,10 @@ export default function SchoolsPage() {
                 </div>
                 <ul className="mt-6 space-y-4">
                   {[
-                    'A clearer institutional direction that leadership teams can actually use.',
-                    'Stronger routines for review, accountability, and academic follow-through.',
-                    'Better preparation for accreditation, inspection, and quality audits.',
-                    'More confident communication between governance, leadership, and staff.',
+                    'Clear institutional priorities supported by actionable improvement plans.',
+                    'Stronger leadership accountability and execution systems.',
+                    'Greater readiness for accreditation, inspection, and quality reviews.',
+                    'Improved communication between governance, leadership, and staff.',
                   ].map((item) => (
                     <li key={item} className="flex gap-3 text-[13px] leading-6 text-white/82">
                       <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
@@ -338,8 +338,8 @@ export default function SchoolsPage() {
                     Engagement style
                   </div>
                   <p className="mt-2 text-[13px] leading-6 text-white/76">
-                    Strategic, collaborative, and grounded in the realities of
-                    running a school well.
+                    Collaborative, evidence-informed, and grounded in the
+                    realities of school leadership.
                   </p>
                 </div>
               </div>
@@ -354,11 +354,11 @@ export default function SchoolsPage() {
                 ENGAGEMENT MODEL
               </span>
               <h2 className="mt-5 [font-family:var(--font-hanken)] text-3xl font-semibold tracking-[-0.03em] md:text-4xl">
-                A focused cycle for sustainable school progress
+                A structured pathway to sustainable school improvement.
               </h2>
               <p className="mt-3 text-[13px] leading-6 text-white/70 md:text-[14px]">
-                We keep the process simple, structured, and measurable so the
-                work can move from diagnosis to implementation with confidence.
+                Our process helps schools move from diagnosis to implementation
+                with clarity, focus, and measurable progress.
               </p>
             </div>
 
@@ -401,19 +401,19 @@ export default function SchoolsPage() {
                     Selected transformation
                   </div>
                   <h3 className="mt-3 text-2xl font-semibold tracking-[-0.03em] text-primary">
-                    Emerald International Academy
+                    Partner School Improvement Project
                   </h3>
                   <p className="mt-4 text-[13px] leading-6 text-ink-muted">
-                    Sapphire supported the leadership team with a clearer
-                    improvement agenda, stronger routines for review, and a
-                    more confident quality framework for the school.
+                    Sapphire supported the leadership team in developing
+                    clearer priorities, stronger review systems, and a more
+                    effective improvement framework.
                   </p>
                   <div className="mt-6 grid gap-3 sm:grid-cols-2">
                     {[
-                      'Improvement priorities restructured',
-                      'Leadership review cadence strengthened',
-                      'Academic systems aligned for follow-through',
-                      'Quality assurance made more visible',
+                      'Strategic priorities clarified',
+                      'Leadership review cycles strengthened',
+                      'Academic systems aligned',
+                      'Quality assurance enhanced',
                     ].map((item) => (
                       <div
                         key={item}
@@ -437,9 +437,9 @@ export default function SchoolsPage() {
                     </h3>
                   </div>
                   <p className="mt-4 text-[13px] leading-6 text-ink-muted">
-                    We work with schools that want international standards,
-                    but also need strategies that fit their community, team, and
-                    operating reality.
+                    We help schools balance international standards with
+                    strategies that fit their community, culture, and
+                    operational reality.
                   </p>
                 </div>
 
@@ -453,9 +453,9 @@ export default function SchoolsPage() {
                     </h3>
                   </div>
                   <p className="mt-4 text-[13px] leading-6 text-white/78">
-                    The aim is not a report that sits on a shelf. It is a
-                    practical roadmap that changes how the school leads,
-                    teaches, reviews, and improves.
+                    Our focus is practical implementation that improves
+                    leadership effectiveness, academic quality, and
+                    institutional performance.
                   </p>
                 </div>
               </div>
@@ -468,13 +468,12 @@ export default function SchoolsPage() {
             <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-2xl">
                 <h2 className="mt-5 [font-family:var(--font-hanken)] text-3xl font-semibold tracking-[-0.03em] text-primary md:text-4xl">
-                  Common questions from school leaders
+                  Common Questions from School Leaders
                 </h2>
               </div>
               <p className="max-w-xl text-[13px] leading-6 text-ink-muted md:text-[14px]">
-                These are the questions we hear most often from schools looking
-                for better systems, stronger leadership, and a more credible
-                route to growth.
+                Questions we frequently receive from schools seeking stronger
+                leadership systems and sustainable improvement.
               </p>
             </div>
 
@@ -508,11 +507,11 @@ export default function SchoolsPage() {
                   </span>
                 </div>
                 <h3 className="mt-5 text-2xl font-semibold tracking-[-0.03em]">
-                  Ready to shape a stronger school strategy?
+                  Ready to strengthen your school?
                 </h3>
                 <p className="mt-4 text-[13px] leading-6 text-white/75">
-                  Start with a focused conversation about your school’s goals,
-                  priorities, and the kind of support you need most.
+                  Start with a focused consultation to discuss your goals,
+                  priorities, challenges, and opportunities for growth.
                 </p>
 
                 <div className="mt-7 grid gap-3">

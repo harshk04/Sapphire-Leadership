@@ -98,7 +98,7 @@ export default function StudentPage() {
                   Consult with an Advisor
                 </Link>
                 <Link
-                  href="/resourcespage"
+                  href="/resources"
                   className="rounded-full border-2 border-primary px-6 py-3 text-[11px] font-semibold tracking-tight text-primary"
                 >
                   Explore Programs
@@ -234,7 +234,7 @@ export default function StudentPage() {
                 Start Your Success Journey
               </Link>
               <Link
-                href="/resourcespage"
+                href="/resources"
                 className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-10 py-5 text-[11px] font-semibold tracking-tight text-white backdrop-blur-sm"
               >
                 Schedule a Free Session

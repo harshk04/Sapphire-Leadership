@@ -18,6 +18,16 @@ body {
   color: theme(colors.ink);
 }
 
+button:not(:disabled),
+a,
+summary,
+[role='button'],
+input[type='submit'],
+input[type='button'],
+input[type='reset'] {
+  cursor: pointer;
+}
+
 .glass {
   background: var(--glass-bg);
   backdrop-filter: blur(14px);
@@ -25,4 +35,3 @@ body {
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
 }
-

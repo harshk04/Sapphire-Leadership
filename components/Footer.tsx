@@ -18,7 +18,7 @@ const siteSections = [
       { label: 'For Schools', href: '/schools' },
       { label: 'For Teachers', href: '/teacherspage' },
       { label: 'For Students', href: '/studentpage' },
-      { label: 'Resources', href: '/resourcespage' },
+      { label: 'Resources', href: '/resources' },
     ],
   },
 ];

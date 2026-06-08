@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Hanken_Grotesk, Inter } from 'next/font/google';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import './globals.css';
 import { defaultDescription, getSiteUrl, siteName, siteUrl } from '@/lib/seo';
 
@@ -108,6 +109,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         {children}
+        <SpeedInsights />
         <script
           type="application/ld+json"
           suppressHydrationWarning

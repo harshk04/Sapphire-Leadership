@@ -12,7 +12,7 @@ const navItems = [
   { label: 'For Teachers', href: '/teacherspage' },
   { label: 'For Students', href: '/studentpage' },
   { label: 'About Us', href: '/aboutus' },
-  { label: 'Resources', href: '/resourcespage' },
+  { label: 'Resources', href: '/resources' },
   { label: 'Contact', href: '/contact' },
 ];
 
@@ -69,7 +69,7 @@ export default function Navbar() {
   >(null);
   const heroHeaderPages = new Set([
     '/aboutus',
-    '/resourcespage',
+    '/resources',
     '/contact',
     '/consultation',
     '/schools',
@@ -77,7 +77,9 @@ export default function Navbar() {
     '/terms-of-service',
     '/cookie-policy',
   ]);
-  const whiteHeroHeader = !scrolled && heroHeaderPages.has(pathname);
+  const whiteHeroHeader =
+    !scrolled &&
+    (heroHeaderPages.has(pathname) || pathname.startsWith('/resources/'));
 
   useEffect(() => {
     let rafId = 0;

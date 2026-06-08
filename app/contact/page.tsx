@@ -10,10 +10,10 @@ import {
   Mail,
   MapPin,
   Phone,
-  Send,
   ShieldCheck,
   Users,
 } from 'lucide-react';
+import ContactInquiryForm from '@/components/ContactInquiryForm';
 
 export const metadata: Metadata = {
   title: 'Contact Sapphire Leadership Advisor',
@@ -151,40 +151,7 @@ export default function ContactPage() {
 
         <section className="py-16 md:py-24">
           <div className="mx-auto grid max-w-container gap-8 px-5 md:grid-cols-[1.25fr_0.75fr] md:px-10">
-            <div className="glass rounded-2xl p-9 md:p-12">
-              <span className="inline-flex rounded-full bg-gold/15 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-gold">
-                Send an inquiry
-              </span>
-              <h2 className="mt-4 font-display text-3xl font-semibold tracking-[-0.02em] text-primary">
-                Tell us what you need.
-              </h2>
-              <p className="mt-4 text-[14px] leading-7 text-ink-muted">
-                Fill out the form and our team will reply with the right next
-                step for your school or organization.
-              </p>
-
-              <form className="mt-8 space-y-5">
-                <Input label="Full Name" placeholder="e.g. Alistair Sterling" />
-                <Input label="Organization" placeholder="e.g. Global Enterprises Inc." />
-                <Input label="Email Address" placeholder="a.sterling@organization.com" type="email" />
-                <div className="space-y-2">
-                  <label className="text-[10px] font-semibold uppercase tracking-[0.16em] text-primary">
-                    Message
-                  </label>
-                  <textarea
-                    className="min-h-[120px] w-full rounded-md border border-surface-variant bg-white/70 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-primary/20"
-                    placeholder="How can our advisory team assist you?"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary py-3.5 text-[13px] font-semibold text-white hover:bg-primary-2"
-                >
-                  Confirm Inquiry
-                  <Send size={16} />
-                </button>
-              </form>
-            </div>
+            <ContactInquiryForm />
 
             <div className="relative overflow-hidden rounded-2xl">
               <Image
@@ -274,26 +241,3 @@ const additionalChannels = [
     href: '/images/Udyam%20Registration%20Certificate.pdf',
   },
 ];
-
-function Input({
-  label,
-  placeholder,
-  type = 'text',
-}: {
-  label: string;
-  placeholder: string;
-  type?: string;
-}) {
-  return (
-    <div className="space-y-2">
-      <label className="text-[10px] font-semibold uppercase tracking-[0.16em] text-primary">
-        {label}
-      </label>
-      <input
-        type={type}
-        placeholder={placeholder}
-        className="w-full rounded-md border border-surface-variant bg-white/70 px-5 py-3 text-[13px] outline-none focus:ring-2 focus:ring-primary/20"
-      />
-    </div>
-  );
-}
