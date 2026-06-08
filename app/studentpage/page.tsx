@@ -222,7 +222,7 @@ export default function StudentPage() {
             <h2 className="font-display text-4xl font-semibold text-white md:text-6xl">
               Ready to define your future?
             </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-[14px] leading-7 text-primary-fixed md:text-[16px]">
+            <p className="mx-auto mt-6 max-w-2xl text-[14px] leading-7 text-white md:text-[16px]">
               Join the ranks of Sapphire scholars who are leading industries
               across the globe.
             </p>

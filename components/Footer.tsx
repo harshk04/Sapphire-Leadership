@@ -59,7 +59,7 @@ export default function Footer() {
 
         <div className="space-y-3 rounded-[20px] border border-surface-variant/45 bg-surface-low p-5">
           <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-primary whitespace-nowrap">
-            Curated Intelligence for Leaders
+            Subscribe to Newsletter
           </div>
           <p className="text-[12px] leading-6 text-ink-muted">
             A concise monthly brief for executives and board members on the

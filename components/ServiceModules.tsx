@@ -12,7 +12,6 @@ const modules = [
     description:
       'Coaching for senior leaders focused on vision, decision-making, team alignment, and sustained school-wide improvement.',
     image: '/images/leadershipdevelopment.jpeg',
-    accent: 'Leadership',
     href: '/consultation',
     cta: 'Book Consultation',
   },
@@ -21,7 +20,6 @@ const modules = [
     description:
       'Practical advisory to strengthen academic systems, quality assurance, and the routines that shape school excellence.',
     image: '/images/schoolconsultancy.jpeg',
-    accent: 'Quality',
     href: '/schools',
     cta: 'Explore Schools',
   },
@@ -30,7 +28,6 @@ const modules = [
     description:
       'Professional learning journeys that build classroom confidence, instructional skill, and a stronger culture of collaboration.',
     image: '/images/teacherpl.jpeg',
-    accent: 'Learning',
     href: '/teacherspage',
     cta: 'Explore Teachers',
   },
@@ -39,7 +36,6 @@ const modules = [
     description:
       'Programs that connect academic purpose with future readiness, helping students grow with clarity, confidence, and direction.',
     image: '/images/studentsuccess.jpeg',
-    accent: 'Future',
     href: '/studentpage',
     cta: 'Explore Students',
   },
@@ -73,9 +69,6 @@ export default function ServiceModules() {
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-navy/10 to-transparent" />
-              <div className="absolute bottom-4 left-4 rounded-full bg-white/90 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-primary">
-                {m.accent}
-              </div>
             </div>
 
             <div className="flex flex-1 flex-col p-7 md:p-8">

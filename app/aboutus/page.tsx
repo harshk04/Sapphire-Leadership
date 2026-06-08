@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
-import { Globe2, Lightbulb, ShieldCheck, Sparkles, Users } from 'lucide-react';
+import { Globe2, Lightbulb, ShieldCheck, Sparkles } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About Sapphire Leadership Advisor',
@@ -17,18 +17,23 @@ export const metadata: Metadata = {
 const values = [
   {
     icon: Sparkles,
-    title: 'Excellence',
-    desc: 'Deep subject knowledge, strong classroom practice, and a clear focus on student progress.',
+    title: 'Ph.D. in Mathematics',
+    desc: 'Manipal University, reflecting a strong academic foundation and subject expertise.',
   },
   {
     icon: ShieldCheck,
-    title: 'Integrity',
-    desc: 'A steady commitment to ethical teaching, professional learning, and responsible leadership.',
+    title: 'Microsoft Certified Educator',
+    desc: 'A recognition of technology-enabled teaching and practical classroom application.',
   },
   {
     icon: Lightbulb,
-    title: 'Innovation',
-    desc: 'Research-informed teaching, thoughtful technology use, and practical educational improvement.',
+    title: 'Association Member',
+    desc: 'Member of The Association of Mathematics Teachers of India and active in professional learning.',
+  },
+  {
+    icon: Globe2,
+    title: 'Published & Patented',
+    desc: 'Research papers in national and international journals, along with innovation patents.',
   },
 ];
 
@@ -51,7 +56,7 @@ export default function AboutUsPage() {
               <br />
               <span className="text-primary-fixed">and educational growth.</span>
             </h1>
-            <p className="mx-auto mt-5 max-w-2xl text-[14px] leading-7 text-primary-fixed/80 md:text-[16px]">
+            <p className="mx-auto mt-5 max-w-2xl text-[14px] leading-7 text-white md:text-[16px]">
               Sapphire Leadership Advisor supports schools, educators, and
               leaders through strategic advisory, school improvement, teacher
               development, and leadership growth.
@@ -64,12 +69,10 @@ export default function AboutUsPage() {
                 Explore Advisory
               </Link>
               <Link
-                href="/images/Udyam%20Registration%20Certificate.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#company-details"
                 className="rounded-full border border-white/20 bg-white/10 px-6 py-3 text-[11px] font-semibold tracking-tight text-white"
               >
-                Udyam Certificate
+                Company Details
               </Link>
             </div>
           </div>
@@ -79,14 +82,13 @@ export default function AboutUsPage() {
           <div className="mx-auto max-w-container px-5 md:px-10">
             <div className="text-center">
               <h2 className="font-display text-[26px] font-semibold tracking-[-0.02em] text-ink md:text-[34px]">
-                Core values
+                Professional achievements
               </h2>
               <p className="mt-3 text-[13px] leading-6 text-ink-muted md:text-[14px]">
-                The principles that guide the way Sapphire Leadership Advisor
-                works with schools and leaders.
+                The academic milestones and recognitions of Dr. Sunil Kumawat.
               </p>
             </div>
-            <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
               {values.map((value) => {
                 const Icon = value.icon;
                 return (
@@ -130,13 +132,13 @@ export default function AboutUsPage() {
             </div>
 
             <div className="mt-10 grid gap-8 lg:grid-cols-[0.98fr_1.02fr] lg:items-center">
-              <div className="relative overflow-hidden rounded-[28px] border border-surface-variant bg-white shadow-sm">
+              <div className="relative mx-auto aspect-[2/3] w-full max-w-[340px] overflow-hidden rounded-[28px] shadow-sm lg:mx-0 lg:max-w-none">
                 <Image
                   src="/images/sunil.png"
                   alt="Dr. Sunil Kumawat"
-                  width={900}
-                  height={1100}
-                  className="h-[420px] w-full object-cover md:h-[560px]"
+                  fill
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="object-cover"
                   priority
                 />
               </div>
@@ -162,84 +164,65 @@ export default function AboutUsPage() {
                     analysis, and school improvement.
                   </p>
                 </article>
-
               </div>
             </div>
           </div>
         </section>
 
-        <section className="py-16 md:py-24">
+        <section id="company-details" className="py-16 md:py-24">
           <div className="mx-auto grid max-w-container gap-12 px-5 md:grid-cols-[0.95fr_1.05fr] md:px-10">
             <div>
-                <h2 className="font-display text-[26px] font-semibold tracking-[-0.02em] text-ink md:text-[34px]">
-                Professional credentials
-                </h2>
+              <h2 className="font-display text-[26px] font-semibold tracking-[-0.02em] text-ink md:text-[34px]">
+                Company details
+              </h2>
               <p className="mt-3 max-w-lg text-[13px] leading-6 text-ink-muted md:text-[14px]">
-                A glance at the affiliations, publications, and recognitions
-                that support the advisory practice.
+                Sapphire Leadership Advisor is the company established by Dr.
+                Sunil Kumawat for strategic educational advisory and school
+                improvement support.
               </p>
-              <div className="mt-8 space-y-4">
-                {[
-                  ['Ph.D. in Mathematics', 'Manipal University'],
-                  ['Microsoft Certified Educator', 'Technology-enabled teaching'],
-                  ['Association Member', 'The Association of Mathematics Teachers of India'],
-                  ['Published & Patented', 'Research papers and innovation'],
-                ].map(([city, label], index) => (
-                  <div
-                    key={city}
-                    className={`flex items-center gap-4 rounded-xl bg-white p-5 ${index === 0 ? 'border-l-4 border-gold' : 'border border-surface-variant'} `}
-                  >
-                    <div className="text-primary">
-                      <Globe2 size={28} />
-                    </div>
-                    <div>
-                      <h3 className="font-display text-lg font-semibold text-ink">
-                        {city}
-                      </h3>
-                      <p className="text-[12px] text-ink-muted">{label}</p>
-                    </div>
+              <div className="mt-8 space-y-4 rounded-[24px] border border-surface-variant/50 bg-white p-7 shadow-sm md:p-8">
+                <div>
+                  <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-gold">
+                    SAPPHIRE LEADERSHIP ADVISOR
                   </div>
-                ))}
+                  <p className="mt-2 text-[13px] leading-6 text-ink-muted md:text-[14px]">
+                    Office: A-lI First Floor, Mall Road, Sector I, Vidhyadhar
+                    Nagar Jaipur, Rajasthan 302039
+                  </p>
+                </div>
+                <div className="space-y-3 border-t border-surface-variant pt-5 text-[13px] text-ink-muted">
+                  <p>MSME: UDYAM-RJ-17-0643701</p>
+                  <p>GST: 08AHXPK9737A2ZT</p>
+                </div>
+                <Link
+                  href="/images/Udyam%20Registration%20Certificate.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-fit items-center justify-center rounded-full bg-primary px-5 py-3 text-[12px] font-semibold text-white transition-colors hover:bg-primary-2"
+                >
+                  View PDF
+                </Link>
               </div>
             </div>
 
             <div className="relative flex min-h-[560px] items-center justify-center overflow-hidden rounded-3xl bg-primary/5 p-8">
               <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary to-transparent" />
               <div className="glass relative flex h-full w-full flex-col overflow-hidden rounded-2xl p-6 text-center">
-                <div className="flex items-center justify-between gap-4">
-                  <div className="text-left">
+                <div className="flex h-full items-center justify-center p-6">
+                  <div className="max-w-md">
                     <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-primary/70">
-                      Udyam Registration
+                      Advisory Focus
                     </div>
-                    <h3 className="font-display text-2xl font-semibold text-primary">
-                      Certificate
+                    <h3 className="mt-3 font-display text-2xl font-semibold text-primary">
+                      Leadership, school improvement, and strategic advisory
                     </h3>
+                    <p className="mt-4 text-[13px] leading-6 text-ink-muted">
+                      Sapphire Leadership Advisor supports schools through
+                      academic planning, leadership development, and
+                      improvement frameworks that are practical and measurable.
+                    </p>
                   </div>
-                  <Link
-                    href="/images/Udyam%20Registration%20Certificate.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full bg-primary px-4 py-2 text-[11px] font-semibold text-white"
-                  >
-                    Open PDF
-                  </Link>
                 </div>
-                <object
-                  data="/images/Udyam%20Registration%20Certificate.pdf"
-                  type="application/pdf"
-                  className="mt-5 h-[460px] w-full rounded-xl border border-surface-variant bg-white"
-                >
-                  <div className="flex h-full items-center justify-center p-6">
-                    <div>
-                      <p className="font-semibold text-primary">
-                        PDF preview unavailable in this browser.
-                      </p>
-                      <p className="mt-2 text-[13px] text-ink-muted">
-                        Open the certificate using the link above.
-                      </p>
-                    </div>
-                  </div>
-                </object>
               </div>
             </div>
           </div>
@@ -265,12 +248,10 @@ export default function AboutUsPage() {
                     Contact Us
                   </Link>
                   <Link
-                    href="/images/Udyam%20Registration%20Certificate.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="#company-details"
                     className="rounded-full border border-white/20 bg-white/10 px-10 py-5 text-[11px] font-semibold tracking-tight text-white"
                   >
-                    View Certificate
+                    View Company Details
                   </Link>
                 </div>
               </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import {
@@ -35,6 +36,7 @@ type ContactCard =
       tag: string;
       address: string;
       details: string[];
+      certificateHref?: string;
     };
 
 const contactCards: ContactCard[] = [
@@ -61,6 +63,7 @@ const contactCards: ContactCard[] = [
       'MSME: UDYAM-RJ-17-0643701',
       'GST: 08AHXPK9737A2ZT',
     ],
+    certificateHref: '/images/Udyam%20Registration%20Certificate.pdf',
   },
 ];
 
@@ -128,6 +131,16 @@ export default function ContactPage() {
                           <span>{item}</span>
                         </p>
                       ))}
+                      {'certificateHref' in office && office.certificateHref ? (
+                        <Link
+                          href={office.certificateHref}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-4 inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-[12px] font-semibold text-white transition-colors hover:bg-primary-2"
+                        >
+                          View PDF
+                        </Link>
+                      ) : null}
                     </div>
                   )}
                 </article>
