@@ -11,7 +11,7 @@ export const runtime = 'nodejs';
 const actionSchema = z.enum(['confirm', 'complete', 'cancel', 'delete']);
 
 function getRedirectTarget(request: Request) {
-  return request.headers.get('referer') || '/admin/bookings';
+  return request.headers.get('referer') || '/admin';
 }
 
 function actionToStatus(action: z.infer<typeof actionSchema>) {
@@ -56,4 +56,3 @@ export async function POST(
 
   return NextResponse.redirect(getRedirectTarget(request), 303);
 }
-

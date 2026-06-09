@@ -55,6 +55,15 @@ function getAdminEmail() {
   );
 }
 
+function getPublicBaseUrl() {
+  return (
+    process.env.PUBLIC_APP_URL ||
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    process.env.SITE_URL ||
+    'http://localhost:3000'
+  ).replace(/\/$/, '');
+}
+
 function formatBookingRows(booking: ConsultationBookingRecord) {
   return [
     ['Name', booking.name],
@@ -175,6 +184,8 @@ export async function sendConsultationBookingEmails(
     `Time: ${booking.time}`,
     `Meeting Mode: ${booking.meetingMode}`,
     `Message: ${booking.message}`,
+    '',
+    `Review and confirm this booking: ${getPublicBaseUrl()}/admin`,
   ].join('\n');
 
   const userText = [
@@ -204,6 +215,10 @@ export async function sendConsultationBookingEmails(
       <table style="border-collapse:collapse;width:100%;max-width:760px;">
         <tbody>${formatBookingRows(booking)}</tbody>
       </table>
+      <p style="margin:18px 0 0;font-weight:600;color:#8b6b2f;">
+        Review and confirm this booking:
+        <a href="${escapeHtml(`${getPublicBaseUrl()}/admin`)}" style="color:#0b2c59;text-decoration:none;">${escapeHtml(`${getPublicBaseUrl()}/admin`)}</a>
+      </p>
     </div>
   `;
 
