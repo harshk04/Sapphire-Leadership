@@ -68,7 +68,6 @@ export default function Navbar() {
   const heroHeaderPages = new Set([
     '/aboutus',
     '/students',
-    '/teachers',
     '/resources',
     '/contact',
     '/consultation',
@@ -471,11 +470,11 @@ function MobileMenu({
       <div className="absolute inset-0 bg-slate-950/25 backdrop-blur-[2px]" onClick={closeMenu} />
       <div className="absolute inset-x-0 top-[72px] px-4">
         <div
-          className="mx-auto max-w-[520px] rounded-2xl border border-surface-variant bg-white/96 px-5 py-4 shadow-[0_18px_40px_rgba(15,23,42,0.14)] backdrop-blur-xl"
+          className="mx-auto max-w-[520px] rounded-2xl border border-[#E5E7EB] bg-white px-5 py-4 shadow-[0_18px_40px_rgba(15,23,42,0.14)] backdrop-blur-xl"
           onClick={(event) => event.stopPropagation()}
         >
           {mobileView === 'main' ? (
-            <div className="grid gap-2 text-sm font-medium text-ink-muted">
+            <div className="grid gap-2 text-sm font-medium text-[#111827]">
               <MobileMenuItem label="For Schools" onClick={() => setMobileView('schools')} />
               <MobileMenuItem label="For Teachers" onClick={() => setMobileView('teachers')} />
               <MobileMenuItem label="For Students" onClick={() => setMobileView('students')} />
@@ -483,7 +482,7 @@ function MobileMenu({
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="rounded-xl px-3 py-2 hover:bg-surface-low hover:text-primary"
+                  className="rounded-xl px-3 py-2 text-[#111827] transition-colors hover:bg-slate-50 hover:text-primary cursor-pointer"
                   onClick={closeMenu}
                 >
                   {item.label}
@@ -491,7 +490,7 @@ function MobileMenu({
               ))}
               <Link
                 href="/consultation"
-                className="mt-1 inline-flex items-center justify-center rounded-xl bg-primary px-3 py-3 text-sm font-semibold text-white"
+                className="mt-1 inline-flex w-full cursor-pointer items-center justify-center rounded-xl bg-primary px-3 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-2"
                 onClick={closeMenu}
               >
                 Book Consultation
@@ -523,72 +522,72 @@ function MobileMenu({
               </div>
 
               {mobileView === 'schools' ? (
-                <div className="grid gap-4 text-sm font-medium text-ink-muted">
-                  <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-primary">
+                <div className="grid gap-4 text-sm font-medium text-[#374151]">
+                  <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#111827]">
                     {schoolMenu.heading}
                   </div>
                   {schoolMenu.items.map((item) => (
                     <Link
                       key={item.label}
                       href={item.href}
-                      className="rounded-xl px-3 py-2 hover:bg-surface-low hover:text-primary"
+                      className="rounded-xl px-3 py-2 text-[#374151] transition-colors hover:bg-slate-50 hover:text-primary cursor-pointer"
                       onClick={closeMenu}
                     >
                       {item.label}
                     </Link>
                   ))}
-                  <div className="my-2 border-t border-surface-variant/60" />
+                  <div className="my-2 border-t border-[#E5E7EB]" />
                   <Link
                     href="/schools"
-                    className="mt-1 inline-flex w-full cursor-pointer items-center justify-center rounded-xl bg-primary px-3 py-3 text-sm font-semibold text-white"
+                    className="mt-1 inline-flex w-full cursor-pointer items-center justify-center rounded-xl bg-primary px-3 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-2"
                     onClick={closeMenu}
                   >
                     View All School Services →
                   </Link>
                 </div>
               ) : mobileView === 'teachers' ? (
-                <div className="grid gap-2 text-sm font-medium text-ink-muted">
-                  <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-primary">
+                <div className="grid gap-2 text-sm font-medium text-[#374151]">
+                  <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#111827]">
                     {teacherMenu.heading}
                   </div>
                   {teacherMenu.items.map((item) => (
                     <Link
                       key={item.label}
                       href={item.href}
-                      className="rounded-xl px-3 py-2 hover:bg-surface-low hover:text-primary"
+                      className="rounded-xl px-3 py-2 text-[#374151] transition-colors hover:bg-slate-50 hover:text-primary cursor-pointer"
                       onClick={closeMenu}
                     >
                       {item.label}
                     </Link>
                   ))}
-                  <div className="my-2 border-t border-surface-variant/60" />
+                  <div className="my-2 border-t border-[#E5E7EB]" />
                   <Link
                     href="/teachers"
-                    className="mt-1 inline-flex w-full cursor-pointer items-center justify-center rounded-xl bg-primary px-3 py-3 text-sm font-semibold text-white"
+                    className="mt-1 inline-flex w-full cursor-pointer items-center justify-center rounded-xl bg-primary px-3 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-2"
                     onClick={closeMenu}
                   >
                     View All Teacher Services →
                   </Link>
                 </div>
               ) : (
-                <div className="grid gap-2 text-sm font-medium text-ink-muted">
-                  <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-primary">
+                <div className="grid gap-2 text-sm font-medium text-[#374151]">
+                  <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#111827]">
                     {studentMenu.heading}
                   </div>
                   {studentMenu.items.map((item) => (
                     <Link
                       key={item.label}
                       href={item.href}
-                      className="rounded-xl px-3 py-2 hover:bg-surface-low hover:text-primary"
+                      className="rounded-xl px-3 py-2 text-[#374151] transition-colors hover:bg-slate-50 hover:text-primary cursor-pointer"
                       onClick={closeMenu}
                     >
                       {item.label}
                     </Link>
                   ))}
-                  <div className="my-2 border-t border-surface-variant/60" />
+                  <div className="my-2 border-t border-[#E5E7EB]" />
                   <Link
                     href="/students"
-                    className="mt-1 inline-flex w-full cursor-pointer items-center justify-center rounded-xl bg-primary px-3 py-3 text-sm font-semibold text-white"
+                    className="mt-1 inline-flex w-full cursor-pointer items-center justify-center rounded-xl bg-primary px-3 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-2"
                     onClick={closeMenu}
                   >
                     View All Student Services →
@@ -613,7 +612,7 @@ function MobileMenuItem({
   return (
     <button
       type="button"
-      className="rounded-xl px-3 py-2 text-left hover:bg-surface-low hover:text-primary"
+      className="cursor-pointer rounded-xl px-3 py-2 text-left text-[#111827] transition-colors hover:bg-slate-50 hover:text-primary"
       onClick={onClick}
     >
       {label}
