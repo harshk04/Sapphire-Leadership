@@ -10,7 +10,7 @@ import { useEffect, useState, type Dispatch, type ReactNode, type SetStateAction
 const navItems = [
   { label: 'For Schools', href: '/schools' },
   { label: 'For Teachers', href: '/teacherspage' },
-  { label: 'For Students', href: '/studentpage' },
+  { label: 'For Students', href: '/students' },
   { label: 'About Us', href: '/aboutus' },
   { label: 'Resources', href: '/resources' },
   { label: 'Contact', href: '/contact' },
@@ -38,9 +38,9 @@ const schoolMenuColumns = [
 const studentMenu = {
   heading: 'Success Programs',
   items: [
-    { label: 'Mentorship', href: '/studentpage' },
-    { label: 'University Admissions', href: '/studentpage' },
-    { label: 'Career Advisory', href: '/studentpage' },
+    { label: 'Mentorship', href: '/students' },
+    { label: 'University Admissions', href: '/students' },
+    { label: 'Career Advisory', href: '/students' },
   ],
 };
 
@@ -59,6 +59,7 @@ const lightBgFaviconSrc = '/images/favicon-lightbg.png';
 
 export default function Navbar() {
   const pathname = usePathname();
+  const currentPath = pathname ?? '';
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [mobileView, setMobileView] = useState<'main' | 'schools' | 'teachers' | 'students'>(
@@ -69,6 +70,7 @@ export default function Navbar() {
   >(null);
   const heroHeaderPages = new Set([
     '/aboutus',
+    '/students',
     '/resources',
     '/contact',
     '/consultation',
@@ -79,7 +81,7 @@ export default function Navbar() {
   ]);
   const whiteHeroHeader =
     !scrolled &&
-    (heroHeaderPages.has(pathname) || pathname.startsWith('/resources/'));
+    (heroHeaderPages.has(currentPath) || currentPath.startsWith('/resources/'));
 
   useEffect(() => {
     let rafId = 0;

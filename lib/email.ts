@@ -1,6 +1,8 @@
 import nodemailer from 'nodemailer';
+import type { ConsultationBookingRecord } from './consultation-bookings';
+import { formatIndiaDate, formatIndianMobile } from './consultation-utils';
 
-const recipientEmail = 'sunilkumawatsir@gmail.com';
+const defaultAdminEmail = 'sunilkumawatsir@gmail.com';
 
 function getEnv(name: string): string {
   const value = process.env[name];
@@ -42,6 +44,38 @@ function formatValue(value: SubmissionFieldValue): string {
   if (value == null || value === '') return 'Not provided';
   if (typeof value === 'boolean') return value ? 'Yes' : 'No';
   return String(value);
+}
+
+function getAdminEmail() {
+  return (
+    process.env.ADMIN_EMAIL ||
+    process.env.ADMIN_BOOKING_EMAIL ||
+    process.env.BOOKING_ADMIN_EMAIL ||
+    defaultAdminEmail
+  );
+}
+
+function formatBookingRows(booking: ConsultationBookingRecord) {
+  return [
+    ['Name', booking.name],
+    ['Organization', booking.organization],
+    ['Designation', booking.designation],
+    ['Email', booking.email],
+    ['Phone', formatIndianMobile(booking.phone)],
+    ['Selected Service', booking.service],
+    ['Date', formatIndiaDate(booking.date)],
+    ['Time', booking.time],
+    ['Meeting Mode', booking.meetingMode],
+    ['Message', booking.message],
+  ]
+    .map(
+      ([label, value]) => `
+        <tr>
+          <td style="padding:8px 12px;border:1px solid #d7dee8;font-weight:600;color:#0b2c59;background:#f7f9fb;">${escapeHtml(label)}</td>
+          <td style="padding:8px 12px;border:1px solid #d7dee8;color:#10203a;">${escapeHtml(value)}</td>
+        </tr>`,
+    )
+    .join('');
 }
 
 export function createSmtpTransport() {
@@ -109,7 +143,7 @@ export async function sendSubmissionEmail(submission: FormSubmission) {
 
   await transporter.sendMail({
     from: `"${fromName}" <${fromEmail}>`,
-    to: recipientEmail,
+    to: getAdminEmail(),
     subject: `${submission.formName}: ${submission.subject}`,
     text,
     html,
@@ -117,5 +151,89 @@ export async function sendSubmissionEmail(submission: FormSubmission) {
       typeof submission.fields.email === 'string' && submission.fields.email
         ? submission.fields.email
         : undefined,
+  });
+}
+
+export async function sendConsultationBookingEmails(
+  booking: ConsultationBookingRecord,
+) {
+  const transporter = createSmtpTransport();
+  const fromEmail = getEnv('SMTP_FROM_EMAIL');
+  const fromName = process.env.SMTP_FROM_NAME || 'Sapphire Leadership';
+  const adminEmail = getAdminEmail();
+
+  const adminText = [
+    'New Consultation Booking – Sapphire Leadership & Advisor',
+    '',
+    `Name: ${booking.name}`,
+    `Organization: ${booking.organization}`,
+    `Designation: ${booking.designation}`,
+    `Email: ${booking.email}`,
+    `Phone: ${formatIndianMobile(booking.phone)}`,
+    `Selected Service: ${booking.service}`,
+    `Date: ${formatIndiaDate(booking.date)}`,
+    `Time: ${booking.time}`,
+    `Meeting Mode: ${booking.meetingMode}`,
+    `Message: ${booking.message}`,
+  ].join('\n');
+
+  const userText = [
+    `Dear ${booking.name},`,
+    '',
+    'Thank you for booking a consultation with Sapphire Leadership & Advisor.',
+    '',
+    'We have received your request and will contact you shortly to confirm the meeting details.',
+    '',
+    'Consultation Details:',
+    '',
+    `Service: ${booking.service}`,
+    `Date: ${formatIndiaDate(booking.date)}`,
+    `Time: ${booking.time}`,
+    `Meeting Mode: ${booking.meetingMode}`,
+    `Message: ${booking.message}`,
+    '',
+    'Regards,',
+    'Dr. Sunil Kumawat',
+    'Sapphire Leadership & Advisor',
+    'Empowering Leaders. Transforming Education.',
+  ].join('\n');
+
+  const adminHtml = `
+    <div style="font-family:Arial,sans-serif;color:#10203a;line-height:1.6">
+      <h2 style="margin:0 0 12px;color:#0b2c59;">New Consultation Booking – Sapphire Leadership &amp; Advisor</h2>
+      <table style="border-collapse:collapse;width:100%;max-width:760px;">
+        <tbody>${formatBookingRows(booking)}</tbody>
+      </table>
+    </div>
+  `;
+
+  const userHtml = `
+    <div style="font-family:Arial,sans-serif;color:#10203a;line-height:1.7">
+      <p style="margin:0 0 16px;">Dear ${escapeHtml(booking.name)},</p>
+      <p style="margin:0 0 16px;">Thank you for booking a consultation with Sapphire Leadership &amp; Advisor.</p>
+      <p style="margin:0 0 16px;">We have received your request and will contact you shortly to confirm the meeting details.</p>
+      <h3 style="margin:24px 0 10px;color:#0b2c59;">Consultation Details</h3>
+      <table style="border-collapse:collapse;width:100%;max-width:760px;">
+        <tbody>${formatBookingRows(booking)}</tbody>
+      </table>
+      <p style="margin:24px 0 0;">Regards,<br/>Dr. Sunil Kumawat<br/>Sapphire Leadership &amp; Advisor<br/>Empowering Leaders. Transforming Education.</p>
+    </div>
+  `;
+
+  await transporter.sendMail({
+    from: `"${fromName}" <${fromEmail}>`,
+    to: adminEmail,
+    subject: 'New Consultation Booking – Sapphire Leadership & Advisor',
+    text: adminText,
+    html: adminHtml,
+    replyTo: booking.email,
+  });
+
+  await transporter.sendMail({
+    from: `"${fromName}" <${fromEmail}>`,
+    to: booking.email,
+    subject: 'Your Consultation Request Has Been Received',
+    text: userText,
+    html: userHtml,
   });
 }

@@ -36,7 +36,7 @@ const modules = [
     description:
       'Programs that connect academic purpose with future readiness, helping students grow with clarity, confidence, and direction.',
     image: '/images/studentsuccess.jpeg',
-    href: '/studentpage',
+    href: '/students',
     cta: 'Explore Students',
   },
 ];
