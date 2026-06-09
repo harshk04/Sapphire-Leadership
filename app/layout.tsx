@@ -101,7 +101,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${hanken.variable} ${inter.variable}`}
+      className={`${hanken.variable} ${inter.variable} scroll-smooth`}
       suppressHydrationWarning
     >
       <body

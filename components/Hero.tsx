@@ -1,9 +1,14 @@
 'use client';
 
+import Image from 'next/image';
 import { motion, useReducedMotion } from 'framer-motion';
-import { Building2, UsersRound } from 'lucide-react';
+import { UsersRound } from 'lucide-react';
 
-const trustAvatars = ['A', 'M', 'S'];
+const trustImages = [
+  { src: '/images/school1.jpeg', alt: 'School leadership scene 1' },
+  { src: '/images/school2.jpeg', alt: 'School leadership scene 2' },
+  { src: '/images/school3.jpeg', alt: 'School leadership scene 3' },
+];
 
 export default function Hero() {
   const reduce = useReducedMotion();
@@ -55,29 +60,34 @@ export default function Hero() {
           initial={reduce ? false : { opacity: 0, y: 12 }}
           animate={reduce ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
-          className="flex flex-wrap items-center justify-center gap-3 text-sm text-white/88 md:text-[17px]"
+        className="flex flex-wrap items-center justify-center gap-3 text-sm text-white/88 md:text-[17px]"
         >
-          <span className="text-white/86">Trusted by</span>
+          <span className="text-white/86">Empowering schools</span>
           <span className="flex items-center -space-x-2">
-            {trustAvatars.map((avatar, index) => (
+            {trustImages.map((image, index) => (
               <span
-                key={avatar}
-                className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white/90 bg-white/90 text-[11px] font-bold text-primary shadow-[0_8px_20px_rgba(7,27,58,0.16)]"
+                key={image.src}
+                className="relative h-10 w-10 overflow-hidden rounded-full border-2 border-white/90 bg-white/92 shadow-[0_8px_20px_rgba(7,27,58,0.16)]"
                 style={{
-                  zIndex: trustAvatars.length - index,
+                  zIndex: trustImages.length - index,
                 }}
               >
-                {avatar}
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="40px"
+                  className="object-cover"
+                />
               </span>
             ))}
           </span>
-          <span className="font-semibold text-white">650,000+</span>
-          <span className="text-white/86">educators and</span>
-          <span className="inline-flex items-center gap-1.5">
-            <Building2 className="h-4 w-4" />
-            <span className="font-semibold text-white">15,000+</span>
-          </span>
-          <span className="text-white/86">school leaders</span>
+          <span className="text-white/86">to</span>
+          <span className="font-semibold text-white">lead,</span>
+          <span className="text-white/86">teachers to</span>
+          <span className="font-semibold text-white">grow,</span>
+          <span className="text-white/86">and students to</span>
+          <span className="font-semibold text-white">succeed.</span>
         </motion.div>
 
         <motion.h1

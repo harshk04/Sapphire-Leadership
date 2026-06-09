@@ -9,47 +9,44 @@ import { useEffect, useState, type Dispatch, type ReactNode, type SetStateAction
 
 const navItems = [
   { label: 'For Schools', href: '/schools' },
-  { label: 'For Teachers', href: '/teacherspage' },
+  { label: 'For Teachers', href: '/teachers' },
   { label: 'For Students', href: '/students' },
   { label: 'About Us', href: '/aboutus' },
   { label: 'Resources', href: '/resources' },
   { label: 'Contact', href: '/contact' },
 ];
 
-const schoolMenuColumns = [
-  {
-    heading: 'Strategic Consulting',
-    items: [
-      { label: 'Governance Excellence', href: '/schools' },
-      { label: 'Financial Optimization', href: '/schools' },
-      { label: 'Crisis Management', href: '/schools' },
-    ],
-  },
-  {
-    heading: 'School Growth',
-    items: [
-      { label: 'Enrollment Strategy', href: '/schools' },
-      { label: 'Brand Identity', href: '/schools' },
-      { label: 'Digital Transformation', href: '/schools' },
-    ],
-  },
-];
+const schoolMenu = {
+  heading: 'School Services',
+  items: [
+    { label: 'School Setup & Launch', href: '/schools#school-setup-launch' },
+    { label: 'Affiliation & Accreditation', href: '/schools#affiliation-accreditation' },
+    { label: 'Academic Excellence', href: '/schools#academic-excellence' },
+    { label: 'Professional Learning', href: '/schools#professional-learning' },
+    { label: 'Leadership Development', href: '/schools#leadership-development' },
+    { label: 'School Improvement', href: '/schools#school-improvement' },
+  ],
+};
 
 const studentMenu = {
-  heading: 'Success Programs',
+  heading: 'Student Services',
   items: [
-    { label: 'Mentorship', href: '/students' },
-    { label: 'University Admissions', href: '/students' },
-    { label: 'Career Advisory', href: '/students' },
+    { label: 'Academic Excellence', href: '/students#academic-excellence' },
+    { label: 'IB Student Support', href: '/students#ib-student-support' },
+    { label: 'Subject Support Areas', href: '/students#subject-support-areas' },
+    { label: 'Career & University Guidance', href: '/students#career-university-guidance' },
+    { label: 'Student Resources', href: '/students#student-resources' },
   ],
 };
 
 const teacherMenu = {
-  heading: 'Professional Development',
+  heading: 'Teacher Services',
   items: [
-    { label: 'Pedagogy Workshops', href: '/teacherspage' },
-    { label: 'Leadership Pathways', href: '/teacherspage' },
-    { label: 'Wellbeing Programs', href: '/teacherspage' },
+    { label: 'Teaching Excellence', href: '/teachers#teaching-excellence' },
+    { label: 'Classroom Leadership', href: '/teachers#classroom-leadership' },
+    { label: 'Instructional Coaching', href: '/teachers#instructional-coaching' },
+    { label: 'Leadership Readiness', href: '/teachers#leadership-readiness' },
+    { label: 'Professional Development Pathways', href: '/teachers#professional-development-pathways' },
   ],
 };
 
@@ -71,6 +68,7 @@ export default function Navbar() {
   const heroHeaderPages = new Set([
     '/aboutus',
     '/students',
+    '/teachers',
     '/resources',
     '/contact',
     '/consultation',
@@ -250,26 +248,32 @@ function NavFrame({
             openKey="schools"
             activeDropdown={activeDropdown}
             setActiveDropdown={setActiveDropdown}
-            widthClass="w-[600px]"
+            widthClass="w-[430px]"
             whiteHeroHeader={whiteHeroHeader}
           >
-            <div className="grid grid-cols-2 gap-6 rounded-lg border border-surface-variant bg-white p-6 shadow-[0_20px_60px_rgba(7,27,58,0.12)]">
-              {schoolMenuColumns.map((column) => (
-                <div key={column.heading} className="space-y-4">
-                  <h3 className="text-sm font-bold text-primary">
-                    {column.heading}
-                  </h3>
-                  <ul className="space-y-2 text-sm font-semibold text-ink-muted">
-                    {column.items.map((item) => (
-                      <li key={item.label}>
-                        <Link href={item.href} className="block transition-colors hover:text-primary">
-                          {item.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+            <div className="rounded-lg border border-surface-variant bg-white p-6 shadow-[0_20px_60px_rgba(7,27,58,0.12)]">
+              <div className="space-y-4">
+                <h3 className="text-sm font-bold text-primary">
+                  {schoolMenu.heading}
+                </h3>
+                <ul className="space-y-2 text-sm font-semibold text-ink-muted">
+                  {schoolMenu.items.map((item) => (
+                    <li key={item.label}>
+                      <Link href={item.href} className="block transition-colors hover:text-primary">
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                <div className="my-4 border-t border-surface-variant/60" />
+                <Link
+                  href="/schools"
+                  className="inline-flex w-full cursor-pointer items-center justify-center rounded-full bg-primary px-4 py-2 text-[11px] font-semibold tracking-tight text-white transition-colors hover:bg-primary-2"
+                  onClick={() => setActiveDropdown(null)}
+                >
+                  View All School Services →
+                </Link>
+              </div>
             </div>
           </Dropdown>
 
@@ -278,7 +282,7 @@ function NavFrame({
             openKey="teachers"
             activeDropdown={activeDropdown}
             setActiveDropdown={setActiveDropdown}
-            widthClass="w-[400px]"
+            widthClass="w-[430px]"
             whiteHeroHeader={whiteHeroHeader}
           >
             <div className="rounded-lg border border-surface-variant bg-white p-6 shadow-[0_20px_60px_rgba(7,27,58,0.12)]">
@@ -295,11 +299,13 @@ function NavFrame({
                     </li>
                   ))}
                 </ul>
+                <div className="my-4 border-t border-surface-variant/60" />
                 <Link
-                  href="/teacherspage"
-                  className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-[11px] font-semibold tracking-tight text-white transition-colors hover:bg-primary-2"
+                  href="/teachers"
+                  className="inline-flex w-full cursor-pointer items-center justify-center rounded-full bg-primary px-4 py-2 text-[11px] font-semibold tracking-tight text-white transition-colors hover:bg-primary-2"
+                  onClick={() => setActiveDropdown(null)}
                 >
-                  View All
+                  View All Teacher Services →
                 </Link>
               </div>
             </div>
@@ -310,7 +316,7 @@ function NavFrame({
             openKey="students"
             activeDropdown={activeDropdown}
             setActiveDropdown={setActiveDropdown}
-            widthClass="w-[400px]"
+            widthClass="w-[430px]"
             whiteHeroHeader={whiteHeroHeader}
           >
             <div className="rounded-lg border border-surface-variant bg-white p-6 shadow-[0_20px_60px_rgba(7,27,58,0.12)]">
@@ -327,6 +333,14 @@ function NavFrame({
                     </li>
                   ))}
                 </ul>
+                <div className="my-4 border-t border-surface-variant/60" />
+                <Link
+                  href="/students"
+                  className="inline-flex w-full cursor-pointer items-center justify-center rounded-full bg-primary px-4 py-2 text-[11px] font-semibold tracking-tight text-white transition-colors hover:bg-primary-2"
+                  onClick={() => setActiveDropdown(null)}
+                >
+                  View All Student Services →
+                </Link>
               </div>
             </div>
           </Dropdown>
@@ -510,25 +524,27 @@ function MobileMenu({
 
               {mobileView === 'schools' ? (
                 <div className="grid gap-4 text-sm font-medium text-ink-muted">
-                  {schoolMenuColumns.map((column) => (
-                    <div key={column.heading} className="space-y-3">
-                      <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-primary">
-                        {column.heading}
-                      </div>
-                      <div className="grid gap-2">
-                        {column.items.map((item) => (
-                          <Link
-                            key={item.label}
-                            href={item.href}
-                            className="rounded-xl px-3 py-2 hover:bg-surface-low hover:text-primary"
-                            onClick={closeMenu}
-                          >
-                            {item.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
+                  <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-primary">
+                    {schoolMenu.heading}
+                  </div>
+                  {schoolMenu.items.map((item) => (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      className="rounded-xl px-3 py-2 hover:bg-surface-low hover:text-primary"
+                      onClick={closeMenu}
+                    >
+                      {item.label}
+                    </Link>
                   ))}
+                  <div className="my-2 border-t border-surface-variant/60" />
+                  <Link
+                    href="/schools"
+                    className="mt-1 inline-flex w-full cursor-pointer items-center justify-center rounded-xl bg-primary px-3 py-3 text-sm font-semibold text-white"
+                    onClick={closeMenu}
+                  >
+                    View All School Services →
+                  </Link>
                 </div>
               ) : mobileView === 'teachers' ? (
                 <div className="grid gap-2 text-sm font-medium text-ink-muted">
@@ -545,12 +561,13 @@ function MobileMenu({
                       {item.label}
                     </Link>
                   ))}
+                  <div className="my-2 border-t border-surface-variant/60" />
                   <Link
-                    href="/teacherspage"
-                    className="mt-1 inline-flex items-center justify-center rounded-xl bg-primary px-3 py-3 text-sm font-semibold text-white"
+                    href="/teachers"
+                    className="mt-1 inline-flex w-full cursor-pointer items-center justify-center rounded-xl bg-primary px-3 py-3 text-sm font-semibold text-white"
                     onClick={closeMenu}
                   >
-                    View All
+                    View All Teacher Services →
                   </Link>
                 </div>
               ) : (
@@ -568,6 +585,14 @@ function MobileMenu({
                       {item.label}
                     </Link>
                   ))}
+                  <div className="my-2 border-t border-surface-variant/60" />
+                  <Link
+                    href="/students"
+                    className="mt-1 inline-flex w-full cursor-pointer items-center justify-center rounded-xl bg-primary px-3 py-3 text-sm font-semibold text-white"
+                    onClick={closeMenu}
+                  >
+                    View All Student Services →
+                  </Link>
                 </div>
               )}
             </div>

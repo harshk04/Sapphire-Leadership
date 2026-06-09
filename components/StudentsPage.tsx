@@ -311,9 +311,14 @@ export default function StudentsPage() {
           <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {supportCards.map((card) => {
               const Icon = card.icon;
+              const id =
+                card.title === 'Academic Excellence'
+                  ? 'academic-excellence'
+                  : undefined;
               return (
                 <article
                   key={card.title}
+                  id={id}
                   className="rounded-[26px] border border-surface-variant/45 bg-white p-6 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-soft"
                 >
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
@@ -331,7 +336,7 @@ export default function StudentsPage() {
           </div>
         </SectionShell>
 
-        <section className="bg-[linear-gradient(180deg,#f4f7fb_0%,#ffffff_100%)] py-16 md:py-24">
+        <section id="ib-student-support" className="bg-[linear-gradient(180deg,#f4f7fb_0%,#ffffff_100%)] py-16 md:py-24 scroll-mt-24">
           <div className="mx-auto max-w-container px-5 md:px-10">
             <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
               <div className="glass rounded-[28px] p-6 md:p-8">
@@ -396,7 +401,7 @@ export default function StudentsPage() {
           </div>
         </SectionShell>
 
-        <SectionShell className="bg-surface">
+        <SectionShell id="subject-support-areas" className="bg-surface scroll-mt-24">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="[font-family:var(--font-hanken)] text-[26px] font-semibold tracking-[-0.02em] text-primary md:text-[32px]">
               Subject Support Areas
@@ -431,7 +436,7 @@ export default function StudentsPage() {
           </div>
         </SectionShell>
 
-        <section className="bg-[linear-gradient(180deg,#f8fafc_0%,#ffffff_100%)] py-16 md:py-24">
+        <section id="career-university-guidance" className="bg-[linear-gradient(180deg,#f8fafc_0%,#ffffff_100%)] py-16 md:py-24 scroll-mt-24">
           <div className="mx-auto max-w-container px-5 md:px-10">
             <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
               <div className="glass rounded-[28px] p-6 md:p-8">
@@ -471,7 +476,7 @@ export default function StudentsPage() {
           </div>
         </section>
 
-        <SectionShell className="bg-surface-low">
+        <SectionShell id="student-resources" className="bg-surface-low scroll-mt-24">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="[font-family:var(--font-hanken)] text-[26px] font-semibold tracking-[-0.02em] text-primary md:text-[32px]">
               University Application Support

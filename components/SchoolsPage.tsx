@@ -29,6 +29,7 @@ import Footer from './Footer';
 import Navbar from './Navbar';
 import SectionShell from './SectionShell';
 import ResourceShareButtons from './ResourceShareButtons';
+import SchoolsFaqAccordion from './SchoolsFaqAccordion';
 
 export const schoolsPageMetadata: Metadata = {
   title: 'For Schools: Educational Consulting & Leadership Advisory',
@@ -232,7 +233,7 @@ const resourceArticles = [
     title: 'How to Prepare for CBSE Affiliation Successfully',
     category: 'Affiliation Guidance',
     date: 'June 9, 2026',
-    image: '/images/architecture-photo.png',
+    image: '/images/cbse.png',
     slug: 'prepare-for-cbse-affiliation-successfully',
   },
   {
@@ -374,7 +375,10 @@ export default function SchoolsPage() {
           </div>
         </SectionShell>
 
-        <section className="bg-[linear-gradient(180deg,#f4f7fb_0%,#ffffff_100%)] py-16 md:py-24">
+        <section
+          id="school-setup-launch"
+          className="bg-[linear-gradient(180deg,#f4f7fb_0%,#ffffff_100%)] py-16 md:py-24 scroll-mt-24"
+        >
           <div className="mx-auto max-w-container px-5 md:px-10">
             <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
               <div className="glass rounded-[28px] p-6 md:p-8">
@@ -408,7 +412,7 @@ export default function SchoolsPage() {
           </div>
         </section>
 
-        <SectionShell className="bg-surface-low">
+        <SectionShell id="affiliation-accreditation" className="bg-surface-low scroll-mt-24">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-gold">
               Affiliation, Accreditation &amp; Quality Assurance
@@ -441,7 +445,7 @@ export default function SchoolsPage() {
           </div>
         </SectionShell>
 
-        <SectionShell className="bg-surface">
+        <SectionShell id="academic-excellence" className="bg-surface scroll-mt-24">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="[font-family:var(--font-hanken)] text-[26px] font-semibold tracking-[-0.02em] text-primary md:text-[32px]">
               Academic Excellence &amp; Curriculum Leadership
@@ -474,7 +478,10 @@ export default function SchoolsPage() {
           </div>
         </SectionShell>
 
-        <section className="bg-[linear-gradient(180deg,#f8fafc_0%,#ffffff_100%)] py-16 md:py-24">
+        <section
+          id="professional-learning"
+          className="bg-[linear-gradient(180deg,#f8fafc_0%,#ffffff_100%)] py-16 md:py-24 scroll-mt-24"
+        >
           <div className="mx-auto max-w-container px-5 md:px-10">
             <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr]">
               <div className="glass rounded-[28px] p-6 md:p-8">
@@ -508,7 +515,7 @@ export default function SchoolsPage() {
           </div>
         </section>
 
-        <SectionShell className="bg-surface-low">
+        <SectionShell id="leadership-development" className="bg-surface-low scroll-mt-24">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="[font-family:var(--font-hanken)] text-[26px] font-semibold tracking-[-0.02em] text-primary md:text-[32px]">
               Building Strong Leadership Teams
@@ -538,7 +545,7 @@ export default function SchoolsPage() {
           </p>
         </SectionShell>
 
-        <section className="bg-white py-16 md:py-24">
+        <section id="school-improvement" className="bg-white py-16 md:py-24 scroll-mt-24">
           <div className="mx-auto max-w-container px-5 md:px-10">
             <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
               <div className="rounded-[28px] border border-surface-variant/45 bg-navy p-7 text-white shadow-[0_20px_60px_rgba(7,27,58,0.18)] md:p-8">
@@ -607,7 +614,7 @@ export default function SchoolsPage() {
             <div className="grid gap-4 md:grid-cols-2">
               <div className="overflow-hidden rounded-[28px] border border-surface-variant/45 bg-white shadow-sm">
                 <Image
-                  src="/images/architecture-photo.png"
+                  src="/images/education.jpg"
                   alt="Academic leadership planning session"
                   width={900}
                   height={700}
@@ -698,26 +705,7 @@ export default function SchoolsPage() {
               </h2>
             </div>
 
-            <div className="mt-10 space-y-4">
-              {faqs.map((item) => (
-                <details
-                  key={item.question}
-                  className="group rounded-[24px] border border-surface-variant/45 bg-white p-6 shadow-sm open:shadow-soft"
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left">
-                    <span className="text-[16px] font-semibold tracking-[-0.02em] text-primary">
-                      {item.question}
-                    </span>
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface text-primary transition-transform duration-300 group-open:rotate-45">
-                      <ArrowRight className="h-4 w-4" />
-                    </span>
-                  </summary>
-                  <p className="mt-4 max-w-4xl text-[13px] leading-7 text-ink-muted">
-                    {item.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
+            <SchoolsFaqAccordion items={faqs} />
           </div>
         </section>
 

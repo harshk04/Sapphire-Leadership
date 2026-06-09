@@ -19,7 +19,7 @@ export const teachersPageMetadata: Metadata = {
   description:
     'Professional growth pathways for teachers, coordinators, heads of department, and school leaders through classroom excellence and leadership development.',
   alternates: {
-    canonical: '/teacherspage',
+    canonical: '/teachers',
   },
 };
 
@@ -187,10 +187,17 @@ export default function TeachersPage() {
               {programs.map((program, index) => {
                 const Icon = program.icon;
                 const reverse = index % 2 === 1;
+                const sectionId =
+                  index === 0
+                    ? 'teaching-excellence'
+                    : index === 1
+                      ? 'classroom-leadership'
+                      : 'instructional-coaching';
                 return (
                   <article
                     key={program.title}
-                    className={`grid items-stretch gap-6 md:grid-cols-[0.95fr_1.05fr] ${reverse ? 'md:[&>*:first-child]:order-2' : ''}`}
+                    id={sectionId}
+                    className={`scroll-mt-24 grid items-stretch gap-6 md:grid-cols-[0.95fr_1.05fr] ${reverse ? 'md:[&>*:first-child]:order-2' : ''}`}
                   >
                     <div className="overflow-hidden rounded-xl">
                       <Image
@@ -232,7 +239,7 @@ export default function TeachersPage() {
           </div>
         </section>
 
-        <section className="bg-navy py-16 text-white md:py-24">
+        <section id="leadership-readiness" className="bg-navy py-16 text-white md:py-24 scroll-mt-24">
           <div className="mx-auto grid max-w-container gap-10 px-5 md:grid-cols-[0.95fr_1.05fr] md:px-10">
             <div>
               <span className="inline-flex rounded-full border border-white/10 bg-white/8 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-gold">
@@ -292,7 +299,7 @@ export default function TeachersPage() {
           </div>
         </section>
 
-        <section className="bg-navy py-16 text-white md:py-24">
+        <section id="professional-development-pathways" className="bg-navy py-16 text-white md:py-24 scroll-mt-24">
           <div className="mx-auto max-w-container px-5 md:px-10">
             <div className="flex items-end justify-between gap-6">
               <div>
